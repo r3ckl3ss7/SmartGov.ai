@@ -1,7 +1,7 @@
 import User from "../models/user.model.js";
 import asyncHandler from "express-async-handler";
 import generateToken from "../utils/generateToken.js";
-
+import bcrypt from 'bcrypt'
 const registerUser = asyncHandler(async (req, res) => {
   const { email, password, role } = req.body;
 
@@ -16,15 +16,23 @@ const registerUser = asyncHandler(async (req, res) => {
     res.status(400);
     throw new Error("User already exists");
   }
-
+const hashedPass=await bcrypt.hash(password,10)
   const user = await User.create({
     email,
-    password,
+    password:hashedPass,
     role: role || "auditor",
   });
 
   if (user) {
     const token = generateToken(user._id);
+
+    
+    res.cookie('jwt', token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: 'strict',
+      maxAge: 30 * 24 * 60 * 60 * 1000, 
+    });
 
     res.status(201).json({
       _id: user._id,
@@ -64,6 +72,13 @@ const loginUser = asyncHandler(async (req, res) => {
   if (isPasswordValid) {
     const token = generateToken(user._id);
 
+    res.cookie('jwt', token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: 'strict',
+      maxAge: 30 * 24 * 60 * 60 * 1000, 
+    });
+
     res.json({
       _id: user._id,
       email: user.email,
@@ -78,6 +93,11 @@ const loginUser = asyncHandler(async (req, res) => {
 });
 
 const logoutUser = asyncHandler(async (req, res) => {
+  res.cookie('jwt', '', {
+    httpOnly: true,
+    expires: new Date(0),
+  });
+  
   res.json({ message: "User logged out successfully" });
 });
 

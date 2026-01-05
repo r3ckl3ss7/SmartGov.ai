@@ -30,6 +30,30 @@ const transactionSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  month: {
+    type: String,
+    required: true,
+    enum: [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ],
+  },
+  isMonthEnd: {
+    type: Boolean,
+  },
+  year: {
+    type: Number,
+  },
   riskScore: {
     type: Number,
   },
