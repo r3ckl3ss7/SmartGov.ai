@@ -8,7 +8,7 @@ const paymentSchema = new mongoose.Schema({
   paymentMode: {
     type: String,
     required: true,
-    enum: ["NEFT", "RTGS", "Cheque"],
+    enum: ["NEFT", "RTGS", "CHEQUE"],
   },
   amount: {
     type: Number,
@@ -24,4 +24,4 @@ const paymentSchema = new mongoose.Schema({
 
 const Payment = mongoose.model("Payment", paymentSchema);
 
-export default Payment;
+export {Payment};

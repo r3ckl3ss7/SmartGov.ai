@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 dotenv.config();
 import cookieParser from "cookie-parser";
 import userRoutes from "./routes/user.routes.js";
+import adminRoutes from './routes/admin.routes.js'
 const app = express();
 
 app.use(express.json());
@@ -15,4 +16,5 @@ app.get("/", (req, res) => {
     res.send("HI");
 });
 app.use("/users", userRoutes);
+app.use('/admin',adminRoutes)
 export default app;
