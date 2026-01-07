@@ -17,8 +17,7 @@ const paymentSchema = new mongoose.Schema({
   reason: {
     type: String,
     required: true,
-    // minlength
-    // maxlength
+ 
   },
 });
 
