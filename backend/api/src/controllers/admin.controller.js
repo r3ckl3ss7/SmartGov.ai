@@ -10,7 +10,8 @@ import { Department } from "../models/department.model.js";
 import { Payment } from "../models/payment.model.js";
 import { User } from "../models/user.model.js";
 import { FileUpload } from "../models/fileUpload.model.js";
-
+import mongoose from "mongoose";
+import axios from "axios";
 const calculateChecksum = (filePath) => {
   return new Promise((resolve, reject) => {
     const hash = crypto.createHash("sha256");
@@ -257,4 +258,79 @@ const getTransactionsByFile = asyncHandler(async (req, res) => {
   });
 });
 
-export { upload, getUploadHistory, getTransactionsByFile };
+const generateAnalysis = asyncHandler(async (req, res) => {
+  const { fileId } = req.params;
+  const file = await FileUpload.findOne({ _id: fileId });
+  if (!file) {
+    res.status(404);
+    throw new Error("Invalid File ID provided.");
+  }
+  const transactions = await Transaction.aggregate([
+    { $match: { sourceFile: new mongoose.Types.ObjectId(fileId) } },
+    {
+      $lookup: {
+        from: "vendors",
+        localField: "vendor",
+        foreignField: "_id",
+        as: "Vendor",
+      },
+    },
+    {
+      $lookup: {
+        from: "departments",
+        localField: "department",
+        foreignField: "_id",
+        as: "Department",
+      },
+    },
+    {
+      $lookup: {
+        from: "payments",
+        localField: "payment",
+        foreignField: "_id",
+        as: "Payment",
+      },
+    },
+    { $unwind: "$Vendor" },
+    { $unwind: "$Department" },
+    { $unwind: "$Payment" },
+    {
+      $project: {
+        transaction_id: 1,
+        transactionDate: 1,
+        financialYear: 1,
+        location: 1,
+        budget_head: 1,
+        month: 1,
+        day: 1,
+        isMonthEnd: 1,
+        year: 1,
+        Vendor: {
+          vendor_id: 1,
+          name: 1,
+        },
+        Department: {
+          name: 1,
+          code: 1,
+        },
+        Payment: {
+          paymentDate: 1,
+          paymentMode: 1,
+          amount: 1,
+          reason: 1,
+        },
+      },
+    },
+  ]);
+  const response = await axios.post("http://127.0.0.1:5000", transactions[1], {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  console.log(response.data);
+
+  res.status(200).json({ transactions });
+});
+
+export { upload, getUploadHistory, getTransactionsByFile, generateAnalysis };
