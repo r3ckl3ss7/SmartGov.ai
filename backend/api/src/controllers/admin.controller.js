@@ -322,7 +322,23 @@ const generateAnalysis = asyncHandler(async (req, res) => {
       },
     },
   ]);
-  const response = await axios.post("http://127.0.0.1:5000", transactions[1], {
+
+  const transformedTransactions = transactions.map((t) => ({
+    payment_uid: t.transaction_id,
+    amount: t.Payment.amount,
+    department: t.Department.name,
+    vendor_id: t.Vendor.vendor_id,
+    transaction_date: t.transactionDate,
+    month: t.month,
+    isMonthEnd: t.isMonthEnd,
+  }));
+
+  const payload = {
+    datasetId: fileId,
+    transactions: transformedTransactions,
+  };
+
+  const response = await axios.post("http://127.0.0.1:5000/analyze", payload, {
     headers: {
       "Content-Type": "application/json",
     },
@@ -330,7 +346,7 @@ const generateAnalysis = asyncHandler(async (req, res) => {
 
   console.log(response.data);
 
-  res.status(200).json({ transactions });
+  res.status(200).json(response.data);
 });
 
 export { upload, getUploadHistory, getTransactionsByFile, generateAnalysis };
