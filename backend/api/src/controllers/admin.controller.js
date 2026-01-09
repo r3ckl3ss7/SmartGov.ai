@@ -23,7 +23,7 @@ const calculateChecksum = (filePath) => {
 };
 
 const getFinancialYear = (date) => {
-  const month = date.getMonth() + 1; // 1-12
+  const month = date.getMonth() + 1; 
   const year = date.getFullYear();
   if (month >= 4) {
     return `${year}-${year + 1}`;

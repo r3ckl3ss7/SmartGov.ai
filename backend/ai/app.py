@@ -1,8 +1,10 @@
 from flask import Flask, request, jsonify
+# from flask_cors import CORS
 import pandas as pd
 import numpy as np
 
 app = Flask(__name__)
+# CORS(app)  
 
 
 @app.route('/analyze', methods=["POST"])
@@ -100,9 +102,107 @@ def analyze():
         result['riskLevel'] = str(result['riskLevel'])
         result['riskScore'] = int(result['riskScore'])
 
+    # Department-wise analytics
+    dept_analysis = df.groupby('department').agg({
+        'amount': ['sum', 'mean', 'median', 'count'],
+        'riskScore': ['mean', 'max']
+    }).reset_index()
+    dept_analysis.columns = ['department', 'totalAmount', 'avgAmount', 
+                              'medianAmount', 'transactionCount', 'avgRiskScore', 'maxRiskScore']
+    
+    dept_risk_distribution = df.groupby(['department', 'riskLevel']).size().reset_index(name='count')
+    dept_risk_pivot = dept_risk_distribution.pivot_table(
+        index='department', 
+        columns='riskLevel', 
+        values='count', 
+        fill_value=0
+    ).reset_index()
+    
+    # Vendor-wise analytics
+    vendor_analysis = df.groupby('vendor_id').agg({
+        'amount': ['sum', 'mean', 'count'],
+        'riskScore': ['mean', 'max'],
+        'department': lambda x: x.nunique()
+    }).reset_index()
+    vendor_analysis.columns = ['vendor_id', 'totalAmount', 'avgAmount', 
+                                'transactionCount', 'avgRiskScore', 'maxRiskScore', 'departmentCount']
+    vendor_analysis = vendor_analysis.sort_values('totalAmount', ascending=False).head(20)
+    
+    # Convert to dict and handle NaN values
+    vendor_analysis_dict = vendor_analysis.to_dict(orient='records')
+    for vendor in vendor_analysis_dict:
+        vendor['vendor_id'] = str(vendor['vendor_id'])
+        vendor['totalAmount'] = float(vendor['totalAmount']) if pd.notna(vendor['totalAmount']) else 0
+        vendor['avgAmount'] = float(vendor['avgAmount']) if pd.notna(vendor['avgAmount']) else 0
+        vendor['transactionCount'] = int(vendor['transactionCount']) if pd.notna(vendor['transactionCount']) else 0
+        vendor['avgRiskScore'] = float(vendor['avgRiskScore']) if pd.notna(vendor['avgRiskScore']) else 0
+        vendor['maxRiskScore'] = float(vendor['maxRiskScore']) if pd.notna(vendor['maxRiskScore']) else 0
+        vendor['departmentCount'] = int(vendor['departmentCount']) if pd.notna(vendor['departmentCount']) else 0
+    
+    # Time-based analytics
+    if 'transaction_date' in df.columns:
+        df['date_only'] = df['transaction_date'].dt.date
+        time_analysis = df.groupby('date_only').agg({
+            'amount': ['sum', 'count'],
+            'riskScore': 'mean'
+        }).reset_index()
+        time_analysis.columns = ['date', 'totalAmount', 'transactionCount', 'avgRiskScore']
+        time_analysis['date'] = time_analysis['date'].astype(str)
+        time_analysis = time_analysis.to_dict(orient='records')
+    else:
+        time_analysis = []
+    
+    # Month-end analysis
+    month_end_stats = df.groupby('isMonthEnd').agg({
+        'amount': ['sum', 'mean', 'count'],
+        'riskScore': 'mean'
+    }).reset_index()
+    month_end_stats.columns = ['isMonthEnd', 'totalAmount', 'avgAmount', 'count', 'avgRiskScore']
+    
+    # Payment mode analysis
+    if 'payment_mode' in df.columns:
+        payment_mode_analysis = df.groupby('payment_mode').agg({
+            'amount': ['sum', 'mean', 'count'],
+            'riskScore': 'mean'
+        }).reset_index()
+        payment_mode_analysis.columns = ['paymentMode', 'totalAmount', 'avgAmount', 
+                                          'transactionCount', 'avgRiskScore']
+        payment_mode_analysis = payment_mode_analysis.to_dict(orient='records')
+    else:
+        payment_mode_analysis = []
+    
+    # Risk level distribution
+    risk_distribution = df['riskLevel'].value_counts().to_dict()
+    risk_distribution = {str(k): int(v) for k, v in risk_distribution.items()}
+    
+    # Statistical summary
+    statistical_summary = {
+        'totalTransactions': int(len(df)),
+        'totalAmount': float(df['amount'].sum()),
+        'avgAmount': float(df['amount'].mean()),
+        'medianAmount': float(df['amount'].median()),
+        'stdAmount': float(df['amount'].std()),
+        'avgRiskScore': float(df['riskScore'].mean()),
+        'highRiskCount': int(len(df[df['riskLevel'] == 'High'])),
+        'mediumRiskCount': int(len(df[df['riskLevel'] == 'Medium'])),
+        'lowRiskCount': int(len(df[df['riskLevel'] == 'Low'])),
+        'uniqueDepartments': int(df['department'].nunique()),
+        'uniqueVendors': int(df['vendor_id'].nunique())
+    }
+
     response = {
         "datasetId": dataset_id,
-        "results": results
+        "results": results,
+        "analytics": {
+            "departmentAnalysis": dept_analysis.to_dict(orient='records'),
+            "departmentRiskDistribution": dept_risk_pivot.to_dict(orient='records'),
+            "vendorAnalysis": vendor_analysis_dict,
+            "timeSeriesAnalysis": time_analysis,
+            "monthEndStats": month_end_stats.to_dict(orient='records'),
+            "paymentModeAnalysis": payment_mode_analysis,
+            "riskDistribution": risk_distribution,
+            "statisticalSummary": statistical_summary
+        }
     }
 
     return jsonify(response), 200
