@@ -1,3 +1,5 @@
+import dotenv from 'dotenv'
+dotenv.config()
 import asyncHandler from "express-async-handler";
 import csv from "csv-parser";
 import fs from "fs";
@@ -12,6 +14,7 @@ import { User } from "../models/user.model.js";
 import { FileUpload } from "../models/fileUpload.model.js";
 import mongoose from "mongoose";
 import axios from "axios";
+const AI_URL=process.env.AI_URL
 const calculateChecksum = (filePath) => {
   return new Promise((resolve, reject) => {
     const hash = crypto.createHash("sha256");
@@ -338,7 +341,7 @@ const generateAnalysis = asyncHandler(async (req, res) => {
     transactions: transformedTransactions,
   };
 
-  const response = await axios.post("http://127.0.0.1:5000/analyze", payload, {
+  const response = await axios.post(`${AI_URL}/analyze`, payload, {
     headers: {
       "Content-Type": "application/json",
     },
