@@ -1,0 +1,601 @@
+transaction_id,transaction_date,department,vendor_name,vendor_id,amount,payment_mode,purpose,location,budget_head
+TXN200000,2024-09-13,Education,Metro Infra,V007,58988,CHEQUE,Medicine Procurement,Pune,3601
+TXN200001,2024-04-30,Urban Development,EduTech Solutions,V004,1609420,RTGS,Medicine Procurement,Mumbai,2210
+TXN200002,2025-01-08,Transport,ABC Pharma,V001,72453,NEFT,Electricity Infrastructure,Chennai,2210
+TXN200003,2025-01-21,Urban Development,Metro Infra,V007,1163642,NEFT,Water Pipeline Upgrade,Mumbai,3054
+TXN200004,2024-11-01,Education,XYZ Medical,V002,186868,CHEQUE,Infrastructure Maintenance,Delhi,3601
+TXN200005,2025-01-18,Rural Development,EduTech Solutions,V004,183587,CHEQUE,Medicine Procurement,Chennai,2210
+TXN200006,2024-07-15,Transport,Metro Infra,V007,162054,CHEQUE,Road Repair Work,Pune,3054
+TXN200007,2024-08-06,Education,EduTech Solutions,V004,1329668,CHEQUE,Road Repair Work,Pune,3451
+TXN200008,2024-08-26,Urban Development,XYZ Medical,V002,1576867,NEFT,Emergency Purchase,Pune,2202
+TXN200009,2024-12-07,Transport,ABC Pharma,V001,60347,CHEQUE,Water Pipeline Upgrade,Pune,3054
+TXN200010,2024-09-27,Urban Development,RuralTech Services,V008,159591,NEFT,Emergency Purchase,Delhi,3054
+TXN200011,2024-11-29,Rural Development,XYZ Medical,V002,1349293,CHEQUE,Water Pipeline Upgrade,Bengaluru,3054
+TXN200012,2024-10-15,Rural Development,AquaWorks,V006,1668245,RTGS,Infrastructure Maintenance,Chennai,2210
+TXN200013,2024-12-09,Health,EduTech Solutions,V004,73905,CHEQUE,Infrastructure Maintenance,Bengaluru,3451
+TXN200014,2024-12-11,Health,BuildRight Constructions,V003,184032,RTGS,Infrastructure Maintenance,Bengaluru,3601
+TXN200015,2024-08-21,Rural Development,Metro Infra,V007,218971,RTGS,Infrastructure Maintenance,Mumbai,2210
+TXN200016,2024-06-30,Education,EduTech Solutions,V004,43162,RTGS,Emergency Purchase,Chennai,2202
+TXN200017,2024-08-13,Public Works,ABC Pharma,V001,180139,RTGS,Water Pipeline Upgrade,Chennai,3054
+TXN200018,2024-06-04,Rural Development,ABC Pharma,V001,268322,CHEQUE,Emergency Purchase,Chennai,3451
+TXN200019,2024-10-21,Transport,Metro Infra,V007,1539789,NEFT,Infrastructure Maintenance,Delhi,2202
+TXN200020,2024-11-12,Education,XYZ Medical,V002,53782,NEFT,Medicine Procurement,Chennai,2202
+TXN200021,2024-12-31,Health,AquaWorks,V006,58432,NEFT,Water Pipeline Upgrade,Bengaluru,2202
+TXN200022,2024-08-08,Public Works,AquaWorks,V006,70239,RTGS,Road Repair Work,Bengaluru,3451
+TXN200023,2024-09-07,Health,BuildRight Constructions,V003,1418559,CHEQUE,Digital Education Program,Bengaluru,2202
+TXN200024,2024-12-21,Health,EduTech Solutions,V004,178479,RTGS,Infrastructure Maintenance,Chennai,2210
+TXN200025,2024-12-27,Public Works,XYZ Medical,V002,108449,CHEQUE,Digital Education Program,Mumbai,3054
+TXN200026,2024-07-24,Urban Development,AquaWorks,V006,200754,NEFT,Emergency Purchase,Mumbai,3451
+TXN200027,2024-07-26,Education,RuralTech Services,V008,47596,NEFT,Emergency Purchase,Pune,3451
+TXN200028,2024-08-11,Education,AquaWorks,V006,229563,RTGS,Digital Education Program,Delhi,2202
+TXN200029,2024-05-23,Education,RuralTech Services,V008,93575,RTGS,Water Pipeline Upgrade,Chennai,2210
+TXN200030,2024-12-02,Rural Development,AquaWorks,V006,62224,CHEQUE,Medicine Procurement,Bengaluru,2202
+TXN200031,2024-12-01,Education,Metro Infra,V007,127167,NEFT,Emergency Purchase,Bengaluru,3451
+TXN200032,2024-10-23,Rural Development,XYZ Medical,V002,84565,NEFT,Medicine Procurement,Mumbai,3601
+TXN200033,2024-11-25,Rural Development,BuildRight Constructions,V003,196203,RTGS,Electricity Infrastructure,Pune,2202
+TXN200034,2025-01-06,Urban Development,BuildRight Constructions,V003,915528,CHEQUE,Electricity Infrastructure,Mumbai,3451
+TXN200035,2024-07-09,Education,ABC Pharma,V001,116799,CHEQUE,Infrastructure Maintenance,Chennai,3054
+TXN200036,2024-08-11,Urban Development,Metro Infra,V007,55965,CHEQUE,Digital Education Program,Bengaluru,3601
+TXN200037,2024-12-21,Transport,BuildRight Constructions,V003,177234,CHEQUE,Medicine Procurement,Bengaluru,2202
+TXN200038,2024-04-03,Education,BuildRight Constructions,V003,202293,CHEQUE,Medicine Procurement,Chennai,2210
+TXN200039,2024-09-14,Rural Development,RuralTech Services,V008,67815,CHEQUE,Medicine Procurement,Mumbai,2202
+TXN200040,2024-08-20,Health,XYZ Medical,V002,187253,NEFT,Emergency Purchase,Delhi,3451
+TXN200041,2024-09-14,Urban Development,EduTech Solutions,V004,158579,CHEQUE,Water Pipeline Upgrade,Bengaluru,3601
+TXN200042,2024-08-05,Rural Development,GreenPower Ltd,V005,274030,NEFT,Emergency Purchase,Bengaluru,2202
+TXN200043,2024-10-31,Health,Metro Infra,V007,59017,CHEQUE,Infrastructure Maintenance,Bengaluru,2210
+TXN200044,2024-07-18,Rural Development,GreenPower Ltd,V005,275150,NEFT,Electricity Infrastructure,Pune,2202
+TXN200045,2024-08-08,Education,RuralTech Services,V008,64674,RTGS,Road Repair Work,Mumbai,2202
+TXN200046,2024-06-22,Rural Development,Metro Infra,V007,145856,RTGS,Road Repair Work,Mumbai,3054
+TXN200047,2024-09-11,Health,AquaWorks,V006,1661902,RTGS,Electricity Infrastructure,Delhi,3451
+TXN200048,2024-09-17,Urban Development,GreenPower Ltd,V005,56853,NEFT,Emergency Purchase,Mumbai,2210
+TXN200049,2024-05-14,Public Works,GreenPower Ltd,V005,1080740,RTGS,Emergency Purchase,Mumbai,3451
+TXN200050,2024-08-11,Transport,BuildRight Constructions,V003,174947,CHEQUE,Road Repair Work,Pune,2210
+TXN200051,2024-08-21,Health,BuildRight Constructions,V003,58982,RTGS,Medicine Procurement,Delhi,3054
+TXN200052,2024-05-13,Urban Development,EduTech Solutions,V004,955176,RTGS,Medicine Procurement,Pune,3601
+TXN200053,2024-10-31,Public Works,BuildRight Constructions,V003,1200036,NEFT,Infrastructure Maintenance,Pune,2210
+TXN200054,2024-07-02,Education,GreenPower Ltd,V005,179220,NEFT,Digital Education Program,Bengaluru,3601
+TXN200055,2024-07-01,Public Works,AquaWorks,V006,105653,NEFT,Medicine Procurement,Delhi,3601
+TXN200056,2025-01-08,Education,RuralTech Services,V008,157192,NEFT,Electricity Infrastructure,Bengaluru,3451
+TXN200057,2025-01-05,Transport,GreenPower Ltd,V005,100179,RTGS,Infrastructure Maintenance,Mumbai,3451
+TXN200058,2024-09-25,Health,BuildRight Constructions,V003,1236019,RTGS,Infrastructure Maintenance,Delhi,2210
+TXN200059,2024-10-13,Urban Development,GreenPower Ltd,V005,221583,RTGS,Medicine Procurement,Bengaluru,2202
+TXN200060,2024-06-20,Public Works,RuralTech Services,V008,1463659,RTGS,Water Pipeline Upgrade,Pune,2202
+TXN200061,2024-04-18,Public Works,EduTech Solutions,V004,40280,RTGS,Road Repair Work,Delhi,3451
+TXN200062,2024-08-21,Urban Development,EduTech Solutions,V004,243486,NEFT,Medicine Procurement,Pune,2210
+TXN200063,2024-06-13,Transport,ABC Pharma,V001,118550,RTGS,Electricity Infrastructure,Mumbai,2210
+TXN200064,2025-01-25,Urban Development,BuildRight Constructions,V003,227693,CHEQUE,Road Repair Work,Pune,3451
+TXN200065,2024-06-16,Public Works,BuildRight Constructions,V003,1775799,CHEQUE,Road Repair Work,Chennai,2202
+TXN200066,2024-12-25,Urban Development,ABC Pharma,V001,193108,CHEQUE,Electricity Infrastructure,Mumbai,2210
+TXN200067,2024-04-16,Health,BuildRight Constructions,V003,67503,RTGS,Emergency Purchase,Bengaluru,3601
+TXN200068,2024-04-26,Rural Development,ABC Pharma,V001,218432,NEFT,Road Repair Work,Pune,2210
+TXN200069,2024-11-20,Health,XYZ Medical,V002,57314,CHEQUE,Electricity Infrastructure,Bengaluru,3054
+TXN200070,2024-05-09,Public Works,EduTech Solutions,V004,93796,NEFT,Electricity Infrastructure,Bengaluru,3451
+TXN200071,2024-10-13,Health,RuralTech Services,V008,115318,NEFT,Water Pipeline Upgrade,Mumbai,2210
+TXN200072,2024-06-15,Public Works,GreenPower Ltd,V005,221636,RTGS,Water Pipeline Upgrade,Chennai,2202
+TXN200073,2024-04-07,Transport,ABC Pharma,V001,216161,NEFT,Electricity Infrastructure,Mumbai,3451
+TXN200074,2024-08-27,Rural Development,GreenPower Ltd,V005,162248,NEFT,Water Pipeline Upgrade,Mumbai,3054
+TXN200075,2024-05-14,Transport,ABC Pharma,V001,60044,CHEQUE,Road Repair Work,Pune,3451
+TXN200076,2024-07-17,Education,XYZ Medical,V002,77156,CHEQUE,Water Pipeline Upgrade,Pune,3054
+TXN200077,2024-06-07,Urban Development,GreenPower Ltd,V005,224375,RTGS,Infrastructure Maintenance,Bengaluru,3451
+TXN200078,2024-10-19,Health,BuildRight Constructions,V003,1731161,CHEQUE,Road Repair Work,Bengaluru,3054
+TXN200079,2024-06-12,Transport,AquaWorks,V006,71695,RTGS,Medicine Procurement,Pune,3054
+TXN200080,2024-10-21,Health,EduTech Solutions,V004,276340,CHEQUE,Digital Education Program,Pune,3054
+TXN200081,2024-05-04,Transport,Metro Infra,V007,194449,NEFT,Digital Education Program,Bengaluru,3054
+TXN200082,2024-04-25,Public Works,XYZ Medical,V002,1298995,CHEQUE,Infrastructure Maintenance,Mumbai,3054
+TXN200083,2024-11-10,Urban Development,AquaWorks,V006,137871,RTGS,Medicine Procurement,Bengaluru,3601
+TXN200084,2025-01-07,Education,XYZ Medical,V002,1561690,RTGS,Water Pipeline Upgrade,Mumbai,3054
+TXN200085,2024-12-05,Health,BuildRight Constructions,V003,148754,RTGS,Digital Education Program,Pune,3054
+TXN200086,2024-08-12,Transport,EduTech Solutions,V004,186098,CHEQUE,Road Repair Work,Delhi,2202
+TXN200087,2024-06-22,Health,EduTech Solutions,V004,252815,RTGS,Water Pipeline Upgrade,Mumbai,3451
+TXN200088,2024-09-18,Transport,Metro Infra,V007,90438,NEFT,Medicine Procurement,Mumbai,3054
+TXN200089,2025-01-10,Health,AquaWorks,V006,107726,CHEQUE,Infrastructure Maintenance,Delhi,3451
+TXN200090,2024-10-14,Transport,EduTech Solutions,V004,128657,NEFT,Road Repair Work,Pune,3601
+TXN200091,2024-10-02,Education,EduTech Solutions,V004,1221045,RTGS,Road Repair Work,Bengaluru,3451
+TXN200092,2024-09-07,Health,BuildRight Constructions,V003,1692515,CHEQUE,Road Repair Work,Delhi,2210
+TXN200093,2024-10-18,Urban Development,RuralTech Services,V008,105133,NEFT,Infrastructure Maintenance,Mumbai,2202
+TXN200094,2024-12-24,Rural Development,XYZ Medical,V002,229198,CHEQUE,Electricity Infrastructure,Bengaluru,2210
+TXN200095,2025-01-08,Health,ABC Pharma,V001,100968,CHEQUE,Medicine Procurement,Pune,2202
+TXN200096,2024-08-07,Urban Development,Metro Infra,V007,69394,NEFT,Medicine Procurement,Pune,3601
+TXN200097,2025-01-24,Education,Metro Infra,V007,247221,CHEQUE,Medicine Procurement,Delhi,3601
+TXN200098,2024-09-02,Transport,GreenPower Ltd,V005,208971,NEFT,Road Repair Work,Chennai,2202
+TXN200099,2025-01-06,Education,ABC Pharma,V001,224720,CHEQUE,Digital Education Program,Delhi,2210
+TXN200100,2024-07-09,Transport,Metro Infra,V007,1177816,CHEQUE,Road Repair Work,Pune,2202
+TXN200101,2024-12-09,Health,AquaWorks,V006,134979,CHEQUE,Road Repair Work,Mumbai,2210
+TXN200102,2024-08-28,Rural Development,XYZ Medical,V002,92537,RTGS,Emergency Purchase,Mumbai,2202
+TXN200103,2024-11-25,Education,GreenPower Ltd,V005,117314,NEFT,Water Pipeline Upgrade,Bengaluru,3601
+TXN200104,2024-07-05,Education,RuralTech Services,V008,214402,NEFT,Water Pipeline Upgrade,Mumbai,3451
+TXN200105,2024-04-28,Education,ABC Pharma,V001,77201,RTGS,Medicine Procurement,Delhi,2202
+TXN200106,2024-10-19,Transport,AquaWorks,V006,60804,NEFT,Digital Education Program,Mumbai,2202
+TXN200107,2024-12-25,Rural Development,RuralTech Services,V008,1494022,RTGS,Digital Education Program,Bengaluru,2202
+TXN200108,2024-05-26,Health,XYZ Medical,V002,132134,RTGS,Medicine Procurement,Chennai,2202
+TXN200109,2024-10-12,Public Works,GreenPower Ltd,V005,153363,NEFT,Medicine Procurement,Bengaluru,2202
+TXN200110,2024-10-08,Urban Development,RuralTech Services,V008,135485,CHEQUE,Road Repair Work,Delhi,3451
+TXN200111,2024-08-05,Rural Development,Metro Infra,V007,773094,RTGS,Medicine Procurement,Delhi,3054
+TXN200112,2024-07-09,Rural Development,XYZ Medical,V002,128885,RTGS,Digital Education Program,Pune,3601
+TXN200113,2024-04-23,Public Works,AquaWorks,V006,117963,NEFT,Electricity Infrastructure,Chennai,2210
+TXN200114,2024-04-13,Education,XYZ Medical,V002,162091,RTGS,Emergency Purchase,Pune,3451
+TXN200115,2024-12-09,Education,RuralTech Services,V008,250388,CHEQUE,Digital Education Program,Mumbai,3601
+TXN200116,2024-07-30,Public Works,AquaWorks,V006,245477,CHEQUE,Medicine Procurement,Chennai,2202
+TXN200117,2024-10-18,Education,EduTech Solutions,V004,210274,NEFT,Road Repair Work,Chennai,3601
+TXN200118,2024-09-14,Education,Metro Infra,V007,58917,RTGS,Water Pipeline Upgrade,Delhi,2202
+TXN200119,2024-05-20,Transport,RuralTech Services,V008,157168,NEFT,Infrastructure Maintenance,Mumbai,3451
+TXN200120,2024-11-22,Urban Development,EduTech Solutions,V004,262032,CHEQUE,Emergency Purchase,Delhi,3054
+TXN200121,2024-08-29,Public Works,GreenPower Ltd,V005,233479,RTGS,Infrastructure Maintenance,Bengaluru,2202
+TXN200122,2024-07-05,Education,EduTech Solutions,V004,271779,CHEQUE,Infrastructure Maintenance,Pune,2210
+TXN200123,2024-10-20,Public Works,EduTech Solutions,V004,100655,CHEQUE,Emergency Purchase,Delhi,3451
+TXN200124,2024-04-19,Health,ABC Pharma,V001,254722,NEFT,Emergency Purchase,Bengaluru,3054
+TXN200125,2024-04-21,Public Works,EduTech Solutions,V004,1097563,CHEQUE,Emergency Purchase,Chennai,2202
+TXN200126,2024-05-09,Public Works,BuildRight Constructions,V003,108143,CHEQUE,Medicine Procurement,Delhi,3601
+TXN200127,2024-09-27,Education,ABC Pharma,V001,77059,NEFT,Infrastructure Maintenance,Pune,2210
+TXN200128,2024-07-14,Health,AquaWorks,V006,137467,NEFT,Water Pipeline Upgrade,Pune,2210
+TXN200129,2024-07-14,Health,RuralTech Services,V008,56586,RTGS,Medicine Procurement,Bengaluru,3601
+TXN200130,2024-06-19,Rural Development,XYZ Medical,V002,144273,CHEQUE,Digital Education Program,Bengaluru,3054
+TXN200131,2024-09-05,Transport,ABC Pharma,V001,188509,RTGS,Road Repair Work,Bengaluru,2210
+TXN200132,2024-10-04,Rural Development,EduTech Solutions,V004,146161,NEFT,Medicine Procurement,Bengaluru,2202
+TXN200133,2024-11-03,Health,XYZ Medical,V002,271430,RTGS,Road Repair Work,Mumbai,2202
+TXN200134,2024-04-08,Health,BuildRight Constructions,V003,278497,RTGS,Medicine Procurement,Chennai,3601
+TXN200135,2024-10-07,Rural Development,BuildRight Constructions,V003,114264,NEFT,Water Pipeline Upgrade,Mumbai,2210
+TXN200136,2024-05-26,Transport,RuralTech Services,V008,247656,NEFT,Digital Education Program,Mumbai,2210
+TXN200137,2024-12-04,Public Works,ABC Pharma,V001,206819,RTGS,Medicine Procurement,Chennai,2202
+TXN200138,2024-07-23,Urban Development,Metro Infra,V007,91409,RTGS,Infrastructure Maintenance,Chennai,2202
+TXN200139,2024-04-22,Transport,BuildRight Constructions,V003,72258,NEFT,Infrastructure Maintenance,Mumbai,2210
+TXN200140,2025-01-13,Rural Development,ABC Pharma,V001,124987,NEFT,Road Repair Work,Chennai,3451
+TXN200141,2025-01-07,Rural Development,GreenPower Ltd,V005,120795,CHEQUE,Infrastructure Maintenance,Bengaluru,3451
+TXN200142,2024-10-06,Transport,RuralTech Services,V008,40919,CHEQUE,Road Repair Work,Bengaluru,2202
+TXN200143,2024-11-15,Urban Development,RuralTech Services,V008,252475,RTGS,Road Repair Work,Delhi,2210
+TXN200144,2024-06-05,Public Works,Metro Infra,V007,250313,RTGS,Water Pipeline Upgrade,Chennai,2210
+TXN200145,2024-04-21,Rural Development,BuildRight Constructions,V003,1357930,CHEQUE,Water Pipeline Upgrade,Delhi,2210
+TXN200146,2024-12-15,Transport,BuildRight Constructions,V003,839210,CHEQUE,Electricity Infrastructure,Delhi,2202
+TXN200147,2024-06-07,Transport,GreenPower Ltd,V005,248398,NEFT,Electricity Infrastructure,Mumbai,2210
+TXN200148,2024-09-27,Urban Development,GreenPower Ltd,V005,275021,CHEQUE,Digital Education Program,Bengaluru,2202
+TXN200149,2024-08-09,Urban Development,RuralTech Services,V008,108909,CHEQUE,Water Pipeline Upgrade,Mumbai,3054
+TXN200150,2024-10-08,Health,EduTech Solutions,V004,82265,CHEQUE,Digital Education Program,Pune,3451
+TXN200151,2024-06-26,Public Works,XYZ Medical,V002,52732,CHEQUE,Emergency Purchase,Pune,3451
+TXN200152,2025-01-10,Urban Development,XYZ Medical,V002,180430,CHEQUE,Emergency Purchase,Bengaluru,3054
+TXN200153,2024-08-14,Transport,AquaWorks,V006,134437,RTGS,Emergency Purchase,Delhi,3451
+TXN200154,2024-07-27,Education,ABC Pharma,V001,175294,RTGS,Digital Education Program,Chennai,3054
+TXN200155,2024-04-01,Rural Development,ABC Pharma,V001,116276,CHEQUE,Electricity Infrastructure,Bengaluru,3451
+TXN200156,2024-12-19,Public Works,ABC Pharma,V001,99574,CHEQUE,Electricity Infrastructure,Delhi,2210
+TXN200157,2024-04-28,Health,AquaWorks,V006,177124,RTGS,Water Pipeline Upgrade,Mumbai,3451
+TXN200158,2025-01-24,Public Works,BuildRight Constructions,V003,203559,RTGS,Infrastructure Maintenance,Mumbai,2210
+TXN200159,2024-08-03,Rural Development,BuildRight Constructions,V003,56690,CHEQUE,Infrastructure Maintenance,Pune,3451
+TXN200160,2024-08-14,Health,ABC Pharma,V001,187411,RTGS,Water Pipeline Upgrade,Chennai,3451
+TXN200161,2024-12-22,Rural Development,RuralTech Services,V008,276848,NEFT,Medicine Procurement,Delhi,3601
+TXN200162,2024-04-13,Transport,BuildRight Constructions,V003,55303,NEFT,Medicine Procurement,Chennai,3601
+TXN200163,2024-07-10,Education,Metro Infra,V007,199405,CHEQUE,Water Pipeline Upgrade,Bengaluru,3601
+TXN200164,2024-06-29,Urban Development,GreenPower Ltd,V005,801692,CHEQUE,Emergency Purchase,Bengaluru,3601
+TXN200165,2024-04-04,Transport,Metro Infra,V007,161966,NEFT,Electricity Infrastructure,Bengaluru,2202
+TXN200166,2024-07-25,Health,GreenPower Ltd,V005,50175,NEFT,Digital Education Program,Pune,2210
+TXN200167,2024-08-15,Rural Development,Metro Infra,V007,177165,RTGS,Digital Education Program,Mumbai,2210
+TXN200168,2024-12-16,Health,BuildRight Constructions,V003,101894,CHEQUE,Infrastructure Maintenance,Mumbai,3054
+TXN200169,2024-07-08,Transport,AquaWorks,V006,139470,CHEQUE,Electricity Infrastructure,Chennai,3451
+TXN200170,2024-11-28,Urban Development,ABC Pharma,V001,154613,CHEQUE,Infrastructure Maintenance,Chennai,3054
+TXN200171,2024-07-18,Transport,XYZ Medical,V002,84969,NEFT,Medicine Procurement,Delhi,2210
+TXN200172,2024-05-25,Urban Development,BuildRight Constructions,V003,77182,CHEQUE,Medicine Procurement,Delhi,2210
+TXN200173,2024-06-10,Rural Development,ABC Pharma,V001,233143,NEFT,Medicine Procurement,Chennai,3054
+TXN200174,2024-07-12,Urban Development,XYZ Medical,V002,238121,CHEQUE,Road Repair Work,Delhi,2202
+TXN200175,2024-07-15,Education,XYZ Medical,V002,883437,CHEQUE,Electricity Infrastructure,Pune,3451
+TXN200176,2024-05-22,Education,XYZ Medical,V002,209428,NEFT,Digital Education Program,Pune,3054
+TXN200177,2024-11-03,Public Works,ABC Pharma,V001,114080,NEFT,Electricity Infrastructure,Pune,3054
+TXN200178,2024-12-14,Transport,GreenPower Ltd,V005,48121,RTGS,Medicine Procurement,Bengaluru,3601
+TXN200179,2024-05-21,Public Works,RuralTech Services,V008,181002,CHEQUE,Infrastructure Maintenance,Delhi,3601
+TXN200180,2024-08-26,Education,Metro Infra,V007,1123698,RTGS,Emergency Purchase,Delhi,2210
+TXN200181,2024-09-26,Transport,XYZ Medical,V002,248868,NEFT,Road Repair Work,Chennai,3054
+TXN200182,2024-12-20,Public Works,BuildRight Constructions,V003,96286,CHEQUE,Infrastructure Maintenance,Bengaluru,2202
+TXN200183,2024-05-27,Rural Development,XYZ Medical,V002,222755,CHEQUE,Emergency Purchase,Delhi,3054
+TXN200184,2024-09-30,Health,Metro Infra,V007,273790,CHEQUE,Medicine Procurement,Bengaluru,2210
+TXN200185,2024-10-08,Education,GreenPower Ltd,V005,276248,CHEQUE,Water Pipeline Upgrade,Mumbai,3451
+TXN200186,2024-07-29,Transport,BuildRight Constructions,V003,237781,CHEQUE,Emergency Purchase,Chennai,2210
+TXN200187,2024-09-26,Urban Development,AquaWorks,V006,267540,RTGS,Electricity Infrastructure,Chennai,3054
+TXN200188,2024-06-26,Transport,RuralTech Services,V008,107426,CHEQUE,Infrastructure Maintenance,Mumbai,3054
+TXN200189,2024-11-23,Rural Development,EduTech Solutions,V004,110119,RTGS,Emergency Purchase,Chennai,2202
+TXN200190,2024-06-19,Education,AquaWorks,V006,131391,NEFT,Infrastructure Maintenance,Pune,2202
+TXN200191,2024-08-11,Rural Development,XYZ Medical,V002,212464,NEFT,Infrastructure Maintenance,Bengaluru,2202
+TXN200192,2024-06-15,Public Works,GreenPower Ltd,V005,91430,NEFT,Electricity Infrastructure,Delhi,3054
+TXN200193,2024-07-15,Transport,RuralTech Services,V008,1536807,RTGS,Electricity Infrastructure,Mumbai,3601
+TXN200194,2024-08-30,Transport,ABC Pharma,V001,198258,CHEQUE,Road Repair Work,Delhi,2202
+TXN200195,2024-11-07,Rural Development,Metro Infra,V007,215084,CHEQUE,Electricity Infrastructure,Chennai,2202
+TXN200196,2024-07-02,Rural Development,XYZ Medical,V002,122054,RTGS,Electricity Infrastructure,Delhi,3451
+TXN200197,2024-08-03,Transport,BuildRight Constructions,V003,151038,RTGS,Road Repair Work,Delhi,3601
+TXN200198,2024-10-27,Urban Development,BuildRight Constructions,V003,125997,NEFT,Road Repair Work,Bengaluru,2210
+TXN200199,2024-04-20,Public Works,EduTech Solutions,V004,244942,NEFT,Water Pipeline Upgrade,Pune,2210
+TXN200200,2025-01-20,Transport,EduTech Solutions,V004,174267,NEFT,Electricity Infrastructure,Pune,3601
+TXN200201,2024-09-23,Transport,RuralTech Services,V008,219400,NEFT,Road Repair Work,Chennai,2210
+TXN200202,2024-09-30,Rural Development,ABC Pharma,V001,140096,RTGS,Medicine Procurement,Delhi,2210
+TXN200203,2024-11-01,Transport,AquaWorks,V006,68641,NEFT,Digital Education Program,Bengaluru,3601
+TXN200204,2024-07-22,Transport,RuralTech Services,V008,73895,NEFT,Emergency Purchase,Mumbai,3451
+TXN200205,2025-01-13,Rural Development,EduTech Solutions,V004,78342,RTGS,Electricity Infrastructure,Bengaluru,3451
+TXN200206,2024-08-29,Urban Development,BuildRight Constructions,V003,163050,RTGS,Emergency Purchase,Mumbai,3054
+TXN200207,2024-10-10,Rural Development,GreenPower Ltd,V005,217948,NEFT,Road Repair Work,Delhi,3054
+TXN200208,2024-10-01,Education,GreenPower Ltd,V005,167118,RTGS,Water Pipeline Upgrade,Delhi,3054
+TXN200209,2024-06-18,Public Works,Metro Infra,V007,1380947,NEFT,Water Pipeline Upgrade,Pune,3601
+TXN200210,2024-04-08,Rural Development,ABC Pharma,V001,58874,CHEQUE,Digital Education Program,Pune,3601
+TXN200211,2024-05-22,Urban Development,BuildRight Constructions,V003,88670,RTGS,Digital Education Program,Mumbai,2202
+TXN200212,2024-10-24,Urban Development,BuildRight Constructions,V003,220361,CHEQUE,Emergency Purchase,Delhi,3601
+TXN200213,2024-08-31,Education,RuralTech Services,V008,179144,NEFT,Electricity Infrastructure,Bengaluru,2210
+TXN200214,2025-01-10,Health,GreenPower Ltd,V005,256807,NEFT,Road Repair Work,Bengaluru,3601
+TXN200215,2024-04-30,Transport,RuralTech Services,V008,223611,RTGS,Infrastructure Maintenance,Bengaluru,2202
+TXN200216,2025-01-02,Urban Development,ABC Pharma,V001,124065,RTGS,Electricity Infrastructure,Chennai,3451
+TXN200217,2024-08-30,Transport,AquaWorks,V006,217195,NEFT,Infrastructure Maintenance,Pune,2210
+TXN200218,2024-04-11,Urban Development,ABC Pharma,V001,126627,NEFT,Water Pipeline Upgrade,Bengaluru,3451
+TXN200219,2024-06-13,Health,EduTech Solutions,V004,203912,NEFT,Digital Education Program,Delhi,3054
+TXN200220,2024-09-22,Transport,EduTech Solutions,V004,129641,RTGS,Digital Education Program,Chennai,2210
+TXN200221,2024-08-27,Public Works,AquaWorks,V006,145835,RTGS,Water Pipeline Upgrade,Pune,3601
+TXN200222,2024-09-24,Education,RuralTech Services,V008,126742,NEFT,Digital Education Program,Pune,2202
+TXN200223,2025-01-26,Rural Development,XYZ Medical,V002,50499,RTGS,Electricity Infrastructure,Chennai,3451
+TXN200224,2025-01-05,Urban Development,ABC Pharma,V001,68442,NEFT,Medicine Procurement,Mumbai,3451
+TXN200225,2024-05-01,Urban Development,Metro Infra,V007,204315,CHEQUE,Electricity Infrastructure,Chennai,2210
+TXN200226,2024-07-18,Health,RuralTech Services,V008,85587,NEFT,Electricity Infrastructure,Mumbai,2210
+TXN200227,2024-11-02,Health,ABC Pharma,V001,255642,NEFT,Emergency Purchase,Pune,3601
+TXN200228,2024-08-11,Public Works,BuildRight Constructions,V003,123486,NEFT,Road Repair Work,Chennai,3601
+TXN200229,2024-04-28,Transport,ABC Pharma,V001,242841,RTGS,Water Pipeline Upgrade,Bengaluru,3451
+TXN200230,2024-05-05,Health,Metro Infra,V007,212857,NEFT,Road Repair Work,Bengaluru,3601
+TXN200231,2024-05-23,Health,RuralTech Services,V008,79784,CHEQUE,Medicine Procurement,Bengaluru,2210
+TXN200232,2024-04-05,Rural Development,XYZ Medical,V002,265041,NEFT,Infrastructure Maintenance,Delhi,2202
+TXN200233,2024-11-28,Health,GreenPower Ltd,V005,103509,RTGS,Electricity Infrastructure,Mumbai,2210
+TXN200234,2024-10-05,Rural Development,BuildRight Constructions,V003,62096,RTGS,Electricity Infrastructure,Chennai,3451
+TXN200235,2024-11-22,Rural Development,GreenPower Ltd,V005,53804,CHEQUE,Medicine Procurement,Delhi,2210
+TXN200236,2024-04-08,Rural Development,XYZ Medical,V002,121918,CHEQUE,Water Pipeline Upgrade,Mumbai,3451
+TXN200237,2024-05-01,Public Works,AquaWorks,V006,230779,RTGS,Road Repair Work,Mumbai,2202
+TXN200238,2024-05-30,Public Works,BuildRight Constructions,V003,149566,RTGS,Road Repair Work,Bengaluru,3054
+TXN200239,2025-01-16,Public Works,GreenPower Ltd,V005,203013,CHEQUE,Electricity Infrastructure,Chennai,3054
+TXN200240,2024-04-08,Education,GreenPower Ltd,V005,272816,NEFT,Road Repair Work,Bengaluru,3451
+TXN200241,2024-07-29,Transport,GreenPower Ltd,V005,124286,RTGS,Digital Education Program,Bengaluru,2202
+TXN200242,2025-01-26,Health,GreenPower Ltd,V005,252796,CHEQUE,Infrastructure Maintenance,Pune,3601
+TXN200243,2024-12-12,Public Works,XYZ Medical,V002,167077,RTGS,Infrastructure Maintenance,Mumbai,3054
+TXN200244,2024-04-30,Rural Development,Metro Infra,V007,94155,RTGS,Water Pipeline Upgrade,Delhi,3451
+TXN200245,2024-11-22,Urban Development,XYZ Medical,V002,133088,NEFT,Infrastructure Maintenance,Bengaluru,3601
+TXN200246,2024-12-23,Public Works,AquaWorks,V006,194488,NEFT,Infrastructure Maintenance,Mumbai,2202
+TXN200247,2024-05-18,Education,GreenPower Ltd,V005,187962,RTGS,Road Repair Work,Chennai,2202
+TXN200248,2024-08-05,Health,RuralTech Services,V008,67818,RTGS,Electricity Infrastructure,Bengaluru,2210
+TXN200249,2024-06-19,Public Works,ABC Pharma,V001,176172,CHEQUE,Medicine Procurement,Delhi,2210
+TXN200250,2024-07-14,Urban Development,RuralTech Services,V008,95989,RTGS,Emergency Purchase,Pune,3451
+TXN200251,2024-05-20,Transport,BuildRight Constructions,V003,49927,RTGS,Infrastructure Maintenance,Mumbai,3451
+TXN200252,2024-05-13,Health,ABC Pharma,V001,1475177,CHEQUE,Road Repair Work,Bengaluru,2210
+TXN200253,2024-10-21,Health,XYZ Medical,V002,187974,NEFT,Electricity Infrastructure,Delhi,3601
+TXN200254,2024-10-19,Education,RuralTech Services,V008,137232,NEFT,Electricity Infrastructure,Mumbai,2202
+TXN200255,2024-04-20,Public Works,AquaWorks,V006,758271,NEFT,Digital Education Program,Chennai,3451
+TXN200256,2024-04-29,Health,BuildRight Constructions,V003,41514,NEFT,Electricity Infrastructure,Pune,3601
+TXN200257,2024-11-12,Rural Development,XYZ Medical,V002,137435,RTGS,Road Repair Work,Delhi,3054
+TXN200258,2024-12-03,Transport,BuildRight Constructions,V003,251695,NEFT,Electricity Infrastructure,Delhi,3451
+TXN200259,2024-07-09,Health,BuildRight Constructions,V003,97816,NEFT,Water Pipeline Upgrade,Pune,2202
+TXN200260,2024-11-15,Health,Metro Infra,V007,204723,NEFT,Road Repair Work,Pune,3054
+TXN200261,2024-07-29,Transport,XYZ Medical,V002,77425,RTGS,Infrastructure Maintenance,Delhi,2202
+TXN200262,2024-11-18,Urban Development,BuildRight Constructions,V003,79162,RTGS,Road Repair Work,Bengaluru,2202
+TXN200263,2024-06-19,Health,GreenPower Ltd,V005,117739,RTGS,Emergency Purchase,Mumbai,3054
+TXN200264,2024-12-08,Health,AquaWorks,V006,166467,NEFT,Infrastructure Maintenance,Chennai,2210
+TXN200265,2024-07-18,Urban Development,RuralTech Services,V008,71244,RTGS,Emergency Purchase,Mumbai,3054
+TXN200266,2024-11-08,Public Works,EduTech Solutions,V004,65576,RTGS,Digital Education Program,Bengaluru,2202
+TXN200267,2024-04-30,Rural Development,GreenPower Ltd,V005,207722,NEFT,Road Repair Work,Chennai,3054
+TXN200268,2024-12-18,Education,RuralTech Services,V008,1300612,NEFT,Digital Education Program,Bengaluru,2210
+TXN200269,2024-10-27,Education,GreenPower Ltd,V005,76195,NEFT,Water Pipeline Upgrade,Mumbai,2202
+TXN200270,2024-07-10,Urban Development,XYZ Medical,V002,273131,CHEQUE,Electricity Infrastructure,Bengaluru,3054
+TXN200271,2024-06-29,Education,BuildRight Constructions,V003,225534,CHEQUE,Emergency Purchase,Mumbai,3601
+TXN200272,2024-09-05,Education,ABC Pharma,V001,1789600,RTGS,Emergency Purchase,Delhi,3601
+TXN200273,2024-09-25,Public Works,GreenPower Ltd,V005,266624,RTGS,Medicine Procurement,Delhi,3451
+TXN200274,2024-12-01,Education,GreenPower Ltd,V005,187620,RTGS,Medicine Procurement,Mumbai,3054
+TXN200275,2025-01-20,Urban Development,ABC Pharma,V001,156855,CHEQUE,Medicine Procurement,Delhi,3054
+TXN200276,2024-08-04,Public Works,Metro Infra,V007,275416,NEFT,Digital Education Program,Delhi,3451
+TXN200277,2024-11-15,Urban Development,ABC Pharma,V001,180858,NEFT,Medicine Procurement,Mumbai,2210
+TXN200278,2024-07-24,Urban Development,BuildRight Constructions,V003,121766,RTGS,Water Pipeline Upgrade,Delhi,2210
+TXN200279,2024-05-20,Rural Development,EduTech Solutions,V004,259501,CHEQUE,Electricity Infrastructure,Chennai,3451
+TXN200280,2024-12-24,Education,RuralTech Services,V008,896935,CHEQUE,Infrastructure Maintenance,Delhi,3054
+TXN200281,2024-06-03,Transport,RuralTech Services,V008,239625,RTGS,Medicine Procurement,Delhi,2210
+TXN200282,2024-10-25,Education,EduTech Solutions,V004,78592,CHEQUE,Water Pipeline Upgrade,Bengaluru,3451
+TXN200283,2024-06-24,Health,Metro Infra,V007,196510,CHEQUE,Water Pipeline Upgrade,Delhi,3451
+TXN200284,2024-04-27,Public Works,AquaWorks,V006,259825,RTGS,Electricity Infrastructure,Bengaluru,3601
+TXN200285,2024-09-12,Transport,ABC Pharma,V001,78437,CHEQUE,Digital Education Program,Mumbai,3451
+TXN200286,2024-04-06,Public Works,XYZ Medical,V002,58157,RTGS,Road Repair Work,Mumbai,3601
+TXN200287,2024-04-11,Education,BuildRight Constructions,V003,144084,RTGS,Electricity Infrastructure,Delhi,2210
+TXN200288,2024-04-18,Rural Development,GreenPower Ltd,V005,203439,RTGS,Electricity Infrastructure,Chennai,2210
+TXN200289,2024-05-22,Public Works,XYZ Medical,V002,153689,NEFT,Medicine Procurement,Pune,2210
+TXN200290,2024-09-04,Public Works,BuildRight Constructions,V003,195789,CHEQUE,Digital Education Program,Delhi,3451
+TXN200291,2024-12-30,Education,RuralTech Services,V008,74437,RTGS,Road Repair Work,Chennai,3054
+TXN200292,2024-08-19,Education,XYZ Medical,V002,115279,RTGS,Water Pipeline Upgrade,Chennai,2202
+TXN200293,2024-10-15,Education,AquaWorks,V006,183662,RTGS,Water Pipeline Upgrade,Bengaluru,3451
+TXN200294,2024-09-06,Health,EduTech Solutions,V004,89493,CHEQUE,Water Pipeline Upgrade,Bengaluru,3601
+TXN200295,2024-10-20,Health,AquaWorks,V006,102532,RTGS,Water Pipeline Upgrade,Pune,3451
+TXN200296,2024-08-17,Public Works,EduTech Solutions,V004,242408,NEFT,Infrastructure Maintenance,Chennai,2210
+TXN200297,2024-09-26,Transport,ABC Pharma,V001,258714,RTGS,Digital Education Program,Delhi,3601
+TXN200298,2024-07-25,Rural Development,BuildRight Constructions,V003,215175,RTGS,Infrastructure Maintenance,Mumbai,3601
+TXN200299,2024-08-20,Urban Development,XYZ Medical,V002,234846,RTGS,Digital Education Program,Mumbai,3451
+TXN200300,2024-05-23,Health,Metro Infra,V007,193573,NEFT,Road Repair Work,Bengaluru,3601
+TXN200301,2024-06-16,Transport,GreenPower Ltd,V005,199208,NEFT,Road Repair Work,Bengaluru,3451
+TXN200302,2024-08-26,Rural Development,AquaWorks,V006,142415,CHEQUE,Water Pipeline Upgrade,Chennai,3451
+TXN200303,2024-09-12,Health,RuralTech Services,V008,118649,NEFT,Water Pipeline Upgrade,Pune,2202
+TXN200304,2024-11-10,Urban Development,Metro Infra,V007,63050,RTGS,Digital Education Program,Chennai,2202
+TXN200305,2024-09-14,Education,Metro Infra,V007,42802,NEFT,Medicine Procurement,Pune,3601
+TXN200306,2024-12-11,Public Works,GreenPower Ltd,V005,154598,CHEQUE,Emergency Purchase,Chennai,3451
+TXN200307,2024-10-17,Transport,AquaWorks,V006,1436324,RTGS,Medicine Procurement,Delhi,3601
+TXN200308,2024-07-27,Health,Metro Infra,V007,145091,CHEQUE,Water Pipeline Upgrade,Chennai,2202
+TXN200309,2024-07-06,Transport,RuralTech Services,V008,241150,CHEQUE,Water Pipeline Upgrade,Pune,3601
+TXN200310,2024-05-18,Education,AquaWorks,V006,59683,RTGS,Water Pipeline Upgrade,Mumbai,2210
+TXN200311,2024-08-29,Rural Development,AquaWorks,V006,173399,RTGS,Electricity Infrastructure,Mumbai,3601
+TXN200312,2024-08-27,Urban Development,EduTech Solutions,V004,89311,RTGS,Infrastructure Maintenance,Delhi,3601
+TXN200313,2024-05-25,Public Works,ABC Pharma,V001,42813,NEFT,Digital Education Program,Chennai,2210
+TXN200314,2024-09-03,Transport,XYZ Medical,V002,215140,NEFT,Infrastructure Maintenance,Mumbai,3451
+TXN200315,2025-01-09,Urban Development,GreenPower Ltd,V005,274766,CHEQUE,Water Pipeline Upgrade,Mumbai,3601
+TXN200316,2024-07-11,Transport,XYZ Medical,V002,175901,CHEQUE,Medicine Procurement,Delhi,2210
+TXN200317,2024-05-09,Education,RuralTech Services,V008,200695,RTGS,Emergency Purchase,Delhi,2210
+TXN200318,2025-01-22,Public Works,BuildRight Constructions,V003,132758,RTGS,Infrastructure Maintenance,Delhi,3054
+TXN200319,2024-05-21,Urban Development,XYZ Medical,V002,157922,CHEQUE,Road Repair Work,Delhi,2210
+TXN200320,2024-07-22,Transport,ABC Pharma,V001,202575,NEFT,Infrastructure Maintenance,Mumbai,2210
+TXN200321,2024-06-21,Urban Development,BuildRight Constructions,V003,275632,RTGS,Digital Education Program,Bengaluru,3601
+TXN200322,2024-08-08,Transport,XYZ Medical,V002,142182,CHEQUE,Electricity Infrastructure,Chennai,2202
+TXN200323,2024-10-29,Public Works,Metro Infra,V007,166979,NEFT,Emergency Purchase,Mumbai,2210
+TXN200324,2024-06-28,Education,AquaWorks,V006,42000,RTGS,Road Repair Work,Chennai,3054
+TXN200325,2024-05-29,Public Works,Metro Infra,V007,210729,NEFT,Medicine Procurement,Bengaluru,3054
+TXN200326,2025-01-09,Education,Metro Infra,V007,114340,RTGS,Infrastructure Maintenance,Bengaluru,2210
+TXN200327,2024-08-21,Rural Development,ABC Pharma,V001,80866,NEFT,Electricity Infrastructure,Mumbai,2210
+TXN200328,2024-07-10,Public Works,BuildRight Constructions,V003,162435,NEFT,Infrastructure Maintenance,Pune,3054
+TXN200329,2024-07-20,Rural Development,Metro Infra,V007,192238,NEFT,Digital Education Program,Bengaluru,3601
+TXN200330,2024-07-14,Education,RuralTech Services,V008,225197,RTGS,Water Pipeline Upgrade,Bengaluru,3601
+TXN200331,2024-10-06,Urban Development,EduTech Solutions,V004,173744,NEFT,Infrastructure Maintenance,Delhi,3601
+TXN200332,2024-05-17,Urban Development,GreenPower Ltd,V005,240491,RTGS,Medicine Procurement,Chennai,2202
+TXN200333,2024-09-07,Health,Metro Infra,V007,222101,NEFT,Emergency Purchase,Mumbai,3054
+TXN200334,2024-07-06,Rural Development,XYZ Medical,V002,1458083,CHEQUE,Emergency Purchase,Pune,2202
+TXN200335,2024-05-04,Rural Development,GreenPower Ltd,V005,1305171,NEFT,Emergency Purchase,Bengaluru,3054
+TXN200336,2024-09-30,Transport,RuralTech Services,V008,271409,CHEQUE,Emergency Purchase,Mumbai,3054
+TXN200337,2024-06-30,Health,AquaWorks,V006,213961,CHEQUE,Digital Education Program,Bengaluru,2210
+TXN200338,2024-11-23,Education,Metro Infra,V007,204843,NEFT,Infrastructure Maintenance,Pune,2210
+TXN200339,2024-08-17,Urban Development,EduTech Solutions,V004,50604,RTGS,Medicine Procurement,Chennai,2202
+TXN200340,2024-11-07,Education,GreenPower Ltd,V005,233547,NEFT,Water Pipeline Upgrade,Pune,2202
+TXN200341,2025-01-15,Education,RuralTech Services,V008,106770,RTGS,Electricity Infrastructure,Chennai,3054
+TXN200342,2024-04-01,Health,GreenPower Ltd,V005,269405,CHEQUE,Water Pipeline Upgrade,Delhi,2202
+TXN200343,2024-05-27,Health,AquaWorks,V006,279725,RTGS,Electricity Infrastructure,Delhi,3451
+TXN200344,2024-10-19,Rural Development,EduTech Solutions,V004,63575,RTGS,Road Repair Work,Bengaluru,3054
+TXN200345,2024-12-14,Rural Development,RuralTech Services,V008,217363,CHEQUE,Infrastructure Maintenance,Bengaluru,3601
+TXN200346,2024-06-05,Transport,EduTech Solutions,V004,1247770,NEFT,Water Pipeline Upgrade,Mumbai,2202
+TXN200347,2025-01-04,Public Works,EduTech Solutions,V004,84053,RTGS,Digital Education Program,Bengaluru,2210
+TXN200348,2024-07-13,Rural Development,GreenPower Ltd,V005,219891,CHEQUE,Road Repair Work,Bengaluru,2202
+TXN200349,2024-08-02,Health,RuralTech Services,V008,208010,RTGS,Electricity Infrastructure,Pune,2202
+TXN200350,2024-06-12,Urban Development,EduTech Solutions,V004,253750,NEFT,Water Pipeline Upgrade,Bengaluru,2202
+TXN200351,2024-06-19,Urban Development,RuralTech Services,V008,146456,NEFT,Medicine Procurement,Pune,2210
+TXN200352,2024-10-02,Transport,EduTech Solutions,V004,1289054,RTGS,Infrastructure Maintenance,Delhi,3054
+TXN200353,2024-11-16,Health,BuildRight Constructions,V003,162856,CHEQUE,Digital Education Program,Pune,2202
+TXN200354,2025-01-11,Health,ABC Pharma,V001,1718219,NEFT,Electricity Infrastructure,Pune,3601
+TXN200355,2024-08-14,Health,RuralTech Services,V008,168016,NEFT,Emergency Purchase,Chennai,3054
+TXN200356,2024-04-05,Public Works,XYZ Medical,V002,204559,CHEQUE,Electricity Infrastructure,Pune,2202
+TXN200357,2024-05-11,Education,ABC Pharma,V001,1528947,NEFT,Digital Education Program,Pune,2202
+TXN200358,2024-12-26,Rural Development,BuildRight Constructions,V003,1350849,CHEQUE,Water Pipeline Upgrade,Pune,3451
+TXN200359,2024-07-04,Rural Development,AquaWorks,V006,136606,NEFT,Water Pipeline Upgrade,Pune,3054
+TXN200360,2024-08-01,Health,ABC Pharma,V001,1545618,NEFT,Infrastructure Maintenance,Bengaluru,3451
+TXN200361,2024-12-12,Rural Development,BuildRight Constructions,V003,197974,CHEQUE,Electricity Infrastructure,Delhi,2202
+TXN200362,2024-07-26,Education,BuildRight Constructions,V003,145220,NEFT,Medicine Procurement,Bengaluru,3451
+TXN200363,2024-07-07,Education,AquaWorks,V006,1772253,RTGS,Infrastructure Maintenance,Pune,2210
+TXN200364,2024-04-29,Urban Development,Metro Infra,V007,56441,RTGS,Medicine Procurement,Mumbai,2202
+TXN200365,2024-10-11,Public Works,ABC Pharma,V001,187684,CHEQUE,Digital Education Program,Chennai,2202
+TXN200366,2024-11-27,Health,AquaWorks,V006,152295,CHEQUE,Electricity Infrastructure,Mumbai,3451
+TXN200367,2024-05-12,Health,AquaWorks,V006,117866,CHEQUE,Water Pipeline Upgrade,Bengaluru,3054
+TXN200368,2024-12-03,Rural Development,BuildRight Constructions,V003,130022,CHEQUE,Electricity Infrastructure,Delhi,2202
+TXN200369,2024-07-23,Rural Development,RuralTech Services,V008,78513,CHEQUE,Water Pipeline Upgrade,Pune,3601
+TXN200370,2025-01-23,Transport,AquaWorks,V006,188062,RTGS,Road Repair Work,Pune,2210
+TXN200371,2024-07-26,Education,EduTech Solutions,V004,69431,NEFT,Emergency Purchase,Pune,2210
+TXN200372,2024-07-06,Urban Development,GreenPower Ltd,V005,99504,CHEQUE,Road Repair Work,Mumbai,3601
+TXN200373,2025-01-19,Rural Development,XYZ Medical,V002,278355,CHEQUE,Water Pipeline Upgrade,Delhi,3451
+TXN200374,2024-05-08,Transport,BuildRight Constructions,V003,184326,CHEQUE,Electricity Infrastructure,Delhi,3601
+TXN200375,2024-05-23,Transport,Metro Infra,V007,90238,CHEQUE,Road Repair Work,Delhi,2202
+TXN200376,2024-10-09,Urban Development,ABC Pharma,V001,52378,RTGS,Medicine Procurement,Delhi,3601
+TXN200377,2024-07-19,Transport,GreenPower Ltd,V005,75545,RTGS,Medicine Procurement,Chennai,2202
+TXN200378,2025-01-14,Health,AquaWorks,V006,235411,RTGS,Emergency Purchase,Delhi,3054
+TXN200379,2024-06-02,Education,AquaWorks,V006,177549,RTGS,Electricity Infrastructure,Bengaluru,2210
+TXN200380,2024-09-28,Health,AquaWorks,V006,250507,CHEQUE,Medicine Procurement,Delhi,2202
+TXN200381,2024-08-09,Public Works,EduTech Solutions,V004,45579,CHEQUE,Road Repair Work,Delhi,2210
+TXN200382,2024-12-06,Health,XYZ Medical,V002,88567,NEFT,Water Pipeline Upgrade,Pune,3451
+TXN200383,2024-06-13,Urban Development,GreenPower Ltd,V005,220753,RTGS,Road Repair Work,Delhi,2210
+TXN200384,2024-09-23,Education,RuralTech Services,V008,268867,NEFT,Emergency Purchase,Delhi,2210
+TXN200385,2024-07-03,Urban Development,Metro Infra,V007,81493,CHEQUE,Emergency Purchase,Bengaluru,3451
+TXN200386,2024-07-27,Urban Development,XYZ Medical,V002,178480,NEFT,Digital Education Program,Mumbai,3601
+TXN200387,2024-04-23,Education,BuildRight Constructions,V003,230643,RTGS,Digital Education Program,Chennai,3451
+TXN200388,2024-10-16,Public Works,AquaWorks,V006,1713842,RTGS,Infrastructure Maintenance,Delhi,2202
+TXN200389,2024-11-22,Urban Development,ABC Pharma,V001,230569,CHEQUE,Infrastructure Maintenance,Pune,3451
+TXN200390,2024-08-18,Health,GreenPower Ltd,V005,190346,CHEQUE,Water Pipeline Upgrade,Mumbai,2210
+TXN200391,2025-01-13,Health,EduTech Solutions,V004,205963,CHEQUE,Electricity Infrastructure,Delhi,3054
+TXN200392,2024-08-23,Education,BuildRight Constructions,V003,119690,RTGS,Electricity Infrastructure,Pune,3601
+TXN200393,2024-08-04,Public Works,Metro Infra,V007,224608,RTGS,Electricity Infrastructure,Pune,3451
+TXN200394,2024-12-14,Public Works,EduTech Solutions,V004,131550,NEFT,Infrastructure Maintenance,Mumbai,2210
+TXN200395,2024-11-19,Transport,RuralTech Services,V008,242466,RTGS,Infrastructure Maintenance,Chennai,2210
+TXN200396,2024-06-13,Public Works,GreenPower Ltd,V005,189919,CHEQUE,Electricity Infrastructure,Pune,2210
+TXN200397,2024-07-07,Urban Development,XYZ Medical,V002,119753,CHEQUE,Digital Education Program,Bengaluru,3054
+TXN200398,2024-11-06,Rural Development,XYZ Medical,V002,123691,NEFT,Digital Education Program,Pune,3601
+TXN200399,2024-04-12,Education,GreenPower Ltd,V005,45260,NEFT,Medicine Procurement,Bengaluru,3451
+TXN200400,2024-07-12,Urban Development,GreenPower Ltd,V005,209893,NEFT,Infrastructure Maintenance,Mumbai,2210
+TXN200401,2024-06-06,Urban Development,ABC Pharma,V001,1415465,CHEQUE,Infrastructure Maintenance,Delhi,2202
+TXN200402,2024-08-17,Urban Development,ABC Pharma,V001,47228,NEFT,Digital Education Program,Pune,2210
+TXN200403,2024-12-05,Transport,AquaWorks,V006,266310,RTGS,Emergency Purchase,Delhi,2210
+TXN200404,2024-09-19,Transport,Metro Infra,V007,161471,NEFT,Medicine Procurement,Pune,3601
+TXN200405,2024-09-08,Health,Metro Infra,V007,229827,RTGS,Infrastructure Maintenance,Delhi,2210
+TXN200406,2024-06-19,Education,BuildRight Constructions,V003,260360,NEFT,Digital Education Program,Pune,3451
+TXN200407,2024-09-24,Urban Development,BuildRight Constructions,V003,197697,CHEQUE,Digital Education Program,Mumbai,3601
+TXN200408,2024-08-11,Rural Development,RuralTech Services,V008,243421,CHEQUE,Digital Education Program,Chennai,3451
+TXN200409,2025-01-12,Public Works,AquaWorks,V006,111808,NEFT,Digital Education Program,Delhi,3601
+TXN200410,2024-11-30,Health,AquaWorks,V006,204863,NEFT,Road Repair Work,Delhi,2210
+TXN200411,2024-06-08,Health,ABC Pharma,V001,93723,CHEQUE,Emergency Purchase,Mumbai,3054
+TXN200412,2024-10-05,Rural Development,BuildRight Constructions,V003,268284,CHEQUE,Emergency Purchase,Mumbai,3601
+TXN200413,2024-04-15,Public Works,EduTech Solutions,V004,265400,RTGS,Infrastructure Maintenance,Pune,3451
+TXN200414,2024-11-22,Education,AquaWorks,V006,46939,NEFT,Electricity Infrastructure,Delhi,2210
+TXN200415,2024-10-23,Rural Development,AquaWorks,V006,1488512,RTGS,Road Repair Work,Mumbai,2210
+TXN200416,2024-08-07,Health,GreenPower Ltd,V005,103394,NEFT,Digital Education Program,Mumbai,3054
+TXN200417,2024-11-04,Rural Development,GreenPower Ltd,V005,170705,NEFT,Water Pipeline Upgrade,Mumbai,3451
+TXN200418,2024-08-15,Education,GreenPower Ltd,V005,126908,NEFT,Road Repair Work,Mumbai,2202
+TXN200419,2024-09-11,Rural Development,RuralTech Services,V008,53665,NEFT,Emergency Purchase,Pune,2210
+TXN200420,2024-11-11,Education,Metro Infra,V007,118014,CHEQUE,Medicine Procurement,Delhi,2202
+TXN200421,2024-04-05,Education,GreenPower Ltd,V005,232942,RTGS,Medicine Procurement,Mumbai,3451
+TXN200422,2024-10-21,Health,Metro Infra,V007,214417,CHEQUE,Road Repair Work,Pune,2210
+TXN200423,2025-01-25,Education,EduTech Solutions,V004,220737,NEFT,Medicine Procurement,Mumbai,3601
+TXN200424,2024-07-28,Urban Development,Metro Infra,V007,230973,NEFT,Medicine Procurement,Pune,2210
+TXN200425,2024-05-27,Health,RuralTech Services,V008,177734,RTGS,Medicine Procurement,Mumbai,2202
+TXN200426,2025-01-02,Education,XYZ Medical,V002,260089,RTGS,Medicine Procurement,Pune,2202
+TXN200427,2024-07-24,Rural Development,XYZ Medical,V002,86457,NEFT,Digital Education Program,Pune,2210
+TXN200428,2024-04-23,Education,ABC Pharma,V001,185914,RTGS,Digital Education Program,Delhi,3054
+TXN200429,2024-04-22,Rural Development,RuralTech Services,V008,183867,RTGS,Electricity Infrastructure,Bengaluru,3054
+TXN200430,2024-10-22,Transport,AquaWorks,V006,140394,NEFT,Road Repair Work,Bengaluru,3451
+TXN200431,2024-06-13,Rural Development,ABC Pharma,V001,171347,RTGS,Electricity Infrastructure,Chennai,3451
+TXN200432,2024-08-02,Education,XYZ Medical,V002,770574,CHEQUE,Medicine Procurement,Bengaluru,3601
+TXN200433,2024-09-14,Rural Development,RuralTech Services,V008,122736,RTGS,Water Pipeline Upgrade,Delhi,3451
+TXN200434,2024-11-27,Urban Development,AquaWorks,V006,139586,NEFT,Emergency Purchase,Bengaluru,3054
+TXN200435,2024-05-03,Transport,GreenPower Ltd,V005,217524,RTGS,Medicine Procurement,Chennai,2202
+TXN200436,2024-08-14,Public Works,RuralTech Services,V008,131167,CHEQUE,Water Pipeline Upgrade,Bengaluru,3601
+TXN200437,2024-07-23,Education,XYZ Medical,V002,178608,RTGS,Water Pipeline Upgrade,Mumbai,3601
+TXN200438,2024-06-26,Public Works,EduTech Solutions,V004,79965,CHEQUE,Road Repair Work,Mumbai,2210
+TXN200439,2024-09-12,Transport,AquaWorks,V006,254373,RTGS,Medicine Procurement,Bengaluru,2202
+TXN200440,2024-08-07,Transport,XYZ Medical,V002,213802,CHEQUE,Water Pipeline Upgrade,Pune,3451
+TXN200441,2024-05-16,Public Works,Metro Infra,V007,156969,CHEQUE,Medicine Procurement,Bengaluru,3451
+TXN200442,2024-06-29,Urban Development,BuildRight Constructions,V003,973725,RTGS,Road Repair Work,Chennai,2202
+TXN200443,2024-10-07,Urban Development,AquaWorks,V006,106287,NEFT,Water Pipeline Upgrade,Mumbai,2210
+TXN200444,2025-01-18,Public Works,ABC Pharma,V001,120357,CHEQUE,Water Pipeline Upgrade,Pune,3054
+TXN200445,2024-08-09,Education,GreenPower Ltd,V005,63941,CHEQUE,Electricity Infrastructure,Bengaluru,2210
+TXN200446,2024-07-13,Education,Metro Infra,V007,116140,CHEQUE,Emergency Purchase,Pune,2210
+TXN200447,2024-11-13,Transport,AquaWorks,V006,1319177,RTGS,Road Repair Work,Chennai,3054
+TXN200448,2024-09-28,Education,Metro Infra,V007,73940,CHEQUE,Infrastructure Maintenance,Chennai,3054
+TXN200449,2024-05-03,Rural Development,EduTech Solutions,V004,58554,NEFT,Emergency Purchase,Bengaluru,3451
+TXN200450,2024-10-19,Urban Development,Metro Infra,V007,276273,CHEQUE,Emergency Purchase,Delhi,2210
+TXN200451,2025-01-14,Transport,RuralTech Services,V008,154326,RTGS,Road Repair Work,Mumbai,2210
+TXN200452,2024-11-12,Transport,RuralTech Services,V008,237342,NEFT,Electricity Infrastructure,Mumbai,2202
+TXN200453,2024-10-23,Urban Development,ABC Pharma,V001,117065,CHEQUE,Digital Education Program,Bengaluru,3451
+TXN200454,2024-05-31,Health,EduTech Solutions,V004,189690,NEFT,Medicine Procurement,Bengaluru,2210
+TXN200455,2024-07-20,Urban Development,RuralTech Services,V008,1119086,CHEQUE,Digital Education Program,Bengaluru,2210
+TXN200456,2025-01-07,Rural Development,Metro Infra,V007,76757,RTGS,Emergency Purchase,Delhi,2202
+TXN200457,2024-09-12,Public Works,EduTech Solutions,V004,41579,NEFT,Water Pipeline Upgrade,Pune,3601
+TXN200458,2024-08-13,Health,AquaWorks,V006,214051,RTGS,Water Pipeline Upgrade,Bengaluru,3601
+TXN200459,2024-11-02,Rural Development,ABC Pharma,V001,105148,RTGS,Emergency Purchase,Bengaluru,3601
+TXN200460,2024-08-10,Public Works,EduTech Solutions,V004,94396,CHEQUE,Electricity Infrastructure,Pune,3451
+TXN200461,2024-12-07,Rural Development,BuildRight Constructions,V003,250095,RTGS,Infrastructure Maintenance,Bengaluru,3601
+TXN200462,2024-04-27,Rural Development,AquaWorks,V006,841855,RTGS,Water Pipeline Upgrade,Pune,2210
+TXN200463,2024-08-19,Education,RuralTech Services,V008,226268,NEFT,Emergency Purchase,Chennai,3601
+TXN200464,2024-11-19,Transport,RuralTech Services,V008,93271,NEFT,Infrastructure Maintenance,Bengaluru,2210
+TXN200465,2024-04-26,Education,XYZ Medical,V002,170324,NEFT,Medicine Procurement,Chennai,2202
+TXN200466,2024-12-12,Education,GreenPower Ltd,V005,180102,NEFT,Infrastructure Maintenance,Mumbai,3601
+TXN200467,2024-05-22,Transport,XYZ Medical,V002,63994,NEFT,Road Repair Work,Mumbai,3054
+TXN200468,2024-11-13,Rural Development,Metro Infra,V007,54854,CHEQUE,Infrastructure Maintenance,Delhi,2202
+TXN200469,2024-11-15,Public Works,EduTech Solutions,V004,248982,RTGS,Electricity Infrastructure,Chennai,2202
+TXN200470,2024-09-06,Public Works,AquaWorks,V006,96250,NEFT,Emergency Purchase,Mumbai,3451
+TXN200471,2024-04-17,Public Works,Metro Infra,V007,116299,NEFT,Electricity Infrastructure,Chennai,2210
+TXN200472,2024-07-11,Transport,BuildRight Constructions,V003,152684,RTGS,Electricity Infrastructure,Bengaluru,2210
+TXN200473,2024-04-20,Public Works,XYZ Medical,V002,95174,CHEQUE,Water Pipeline Upgrade,Chennai,2210
+TXN200474,2024-08-27,Transport,AquaWorks,V006,1741341,NEFT,Infrastructure Maintenance,Bengaluru,3054
+TXN200475,2024-09-03,Urban Development,XYZ Medical,V002,163327,RTGS,Emergency Purchase,Mumbai,3601
+TXN200476,2024-09-01,Health,XYZ Medical,V002,130255,NEFT,Infrastructure Maintenance,Pune,2210
+TXN200477,2024-06-28,Public Works,AquaWorks,V006,104853,RTGS,Electricity Infrastructure,Pune,2202
+TXN200478,2024-05-27,Public Works,XYZ Medical,V002,159270,NEFT,Electricity Infrastructure,Chennai,2210
+TXN200479,2024-06-22,Urban Development,Metro Infra,V007,48841,NEFT,Water Pipeline Upgrade,Chennai,2210
+TXN200480,2024-10-29,Rural Development,BuildRight Constructions,V003,259464,RTGS,Medicine Procurement,Pune,2202
+TXN200481,2024-10-02,Education,XYZ Medical,V002,260802,CHEQUE,Emergency Purchase,Bengaluru,3054
+TXN200482,2024-06-16,Public Works,XYZ Medical,V002,1200631,NEFT,Infrastructure Maintenance,Bengaluru,3054
+TXN200483,2024-12-31,Urban Development,XYZ Medical,V002,104479,NEFT,Water Pipeline Upgrade,Chennai,2210
+TXN200484,2024-12-16,Public Works,AquaWorks,V006,114313,RTGS,Water Pipeline Upgrade,Mumbai,2202
+TXN200485,2024-08-01,Rural Development,EduTech Solutions,V004,43961,NEFT,Medicine Procurement,Bengaluru,3601
+TXN200486,2024-07-17,Rural Development,EduTech Solutions,V004,1059194,NEFT,Emergency Purchase,Pune,2210
+TXN200487,2024-11-04,Transport,XYZ Medical,V002,273440,NEFT,Medicine Procurement,Chennai,2202
+TXN200488,2024-07-29,Education,ABC Pharma,V001,59150,CHEQUE,Digital Education Program,Delhi,2210
+TXN200489,2024-07-20,Urban Development,BuildRight Constructions,V003,129672,NEFT,Emergency Purchase,Bengaluru,3601
+TXN200490,2024-07-03,Health,AquaWorks,V006,147995,RTGS,Medicine Procurement,Delhi,2202
+TXN200491,2024-06-15,Rural Development,BuildRight Constructions,V003,130261,NEFT,Infrastructure Maintenance,Mumbai,2202
+TXN200492,2024-09-17,Rural Development,XYZ Medical,V002,247510,RTGS,Medicine Procurement,Bengaluru,3601
+TXN200493,2024-09-16,Health,XYZ Medical,V002,203880,NEFT,Emergency Purchase,Pune,3451
+TXN200494,2024-05-18,Rural Development,AquaWorks,V006,250591,RTGS,Electricity Infrastructure,Bengaluru,2202
+TXN200495,2024-08-11,Rural Development,GreenPower Ltd,V005,235287,RTGS,Emergency Purchase,Chennai,2202
+TXN200496,2024-11-09,Transport,GreenPower Ltd,V005,195607,CHEQUE,Electricity Infrastructure,Delhi,2210
+TXN200497,2024-08-08,Education,EduTech Solutions,V004,160036,CHEQUE,Infrastructure Maintenance,Bengaluru,3601
+TXN200498,2024-04-26,Transport,Metro Infra,V007,219006,RTGS,Emergency Purchase,Bengaluru,3451
+TXN200499,2024-05-15,Education,AquaWorks,V006,277013,RTGS,Emergency Purchase,Pune,2210
+TXN200500,2024-09-01,Transport,ABC Pharma,V001,270215,RTGS,Road Repair Work,Bengaluru,3601
+TXN200501,2024-09-01,Transport,BuildRight Constructions,V003,96008,NEFT,Digital Education Program,Bengaluru,3451
+TXN200502,2024-04-17,Public Works,AquaWorks,V006,1268348,NEFT,Electricity Infrastructure,Bengaluru,3451
+TXN200503,2025-01-01,Education,XYZ Medical,V002,204403,NEFT,Road Repair Work,Mumbai,3451
+TXN200504,2024-08-17,Public Works,BuildRight Constructions,V003,98772,RTGS,Emergency Purchase,Chennai,3451
+TXN200505,2024-09-05,Transport,AquaWorks,V006,172842,CHEQUE,Infrastructure Maintenance,Mumbai,3451
+TXN200506,2024-12-26,Health,ABC Pharma,V001,67195,NEFT,Road Repair Work,Chennai,3054
+TXN200507,2024-09-28,Rural Development,XYZ Medical,V002,232563,CHEQUE,Electricity Infrastructure,Bengaluru,2202
+TXN200508,2024-08-08,Rural Development,Metro Infra,V007,1394433,RTGS,Digital Education Program,Pune,3054
+TXN200509,2024-09-04,Rural Development,Metro Infra,V007,251989,CHEQUE,Medicine Procurement,Bengaluru,3451
+TXN200510,2024-10-04,Rural Development,ABC Pharma,V001,949674,CHEQUE,Road Repair Work,Bengaluru,3054
+TXN200511,2024-12-19,Education,RuralTech Services,V008,1381984,RTGS,Infrastructure Maintenance,Delhi,3054
+TXN200512,2024-06-13,Education,ABC Pharma,V001,85503,CHEQUE,Water Pipeline Upgrade,Pune,2202
+TXN200513,2024-08-28,Urban Development,ABC Pharma,V001,146840,CHEQUE,Medicine Procurement,Bengaluru,3451
+TXN200514,2024-10-02,Rural Development,GreenPower Ltd,V005,258496,CHEQUE,Road Repair Work,Delhi,3601
+TXN200515,2024-09-25,Education,EduTech Solutions,V004,270003,NEFT,Infrastructure Maintenance,Pune,3601
+TXN200516,2024-06-27,Rural Development,GreenPower Ltd,V005,193950,RTGS,Road Repair Work,Pune,2202
+TXN200517,2024-08-18,Public Works,RuralTech Services,V008,124121,RTGS,Road Repair Work,Delhi,3054
+TXN200518,2024-10-03,Transport,AquaWorks,V006,163877,RTGS,Medicine Procurement,Mumbai,3601
+TXN200519,2024-11-17,Urban Development,Metro Infra,V007,244117,RTGS,Medicine Procurement,Mumbai,3054
+TXN200520,2024-12-31,Transport,Metro Infra,V007,112191,RTGS,Digital Education Program,Bengaluru,3601
+TXN200521,2024-08-26,Rural Development,XYZ Medical,V002,242208,NEFT,Medicine Procurement,Chennai,3601
+TXN200522,2024-09-04,Public Works,AquaWorks,V006,103799,NEFT,Water Pipeline Upgrade,Delhi,3601
+TXN200523,2024-10-29,Rural Development,XYZ Medical,V002,83495,CHEQUE,Infrastructure Maintenance,Delhi,3451
+TXN200524,2024-10-19,Rural Development,AquaWorks,V006,171022,RTGS,Digital Education Program,Mumbai,2202
+TXN200525,2024-12-29,Rural Development,Metro Infra,V007,276326,RTGS,Infrastructure Maintenance,Mumbai,3054
+TXN200526,2024-05-04,Transport,XYZ Medical,V002,263329,CHEQUE,Electricity Infrastructure,Mumbai,3601
+TXN200527,2024-11-08,Transport,EduTech Solutions,V004,111778,CHEQUE,Emergency Purchase,Mumbai,2202
+TXN200528,2024-07-23,Rural Development,EduTech Solutions,V004,275493,RTGS,Medicine Procurement,Bengaluru,3054
+TXN200529,2024-06-07,Rural Development,Metro Infra,V007,112109,CHEQUE,Medicine Procurement,Chennai,3601
+TXN200530,2024-12-17,Public Works,EduTech Solutions,V004,121068,NEFT,Digital Education Program,Chennai,2210
+TXN200531,2024-10-02,Health,XYZ Medical,V002,125234,NEFT,Medicine Procurement,Bengaluru,2202
+TXN200532,2024-11-15,Public Works,ABC Pharma,V001,194729,CHEQUE,Water Pipeline Upgrade,Delhi,2210
+TXN200533,2025-01-01,Transport,XYZ Medical,V002,117109,CHEQUE,Digital Education Program,Pune,3601
+TXN200534,2025-01-17,Education,EduTech Solutions,V004,255082,NEFT,Digital Education Program,Chennai,3601
+TXN200535,2024-04-16,Education,BuildRight Constructions,V003,1758368,RTGS,Road Repair Work,Pune,2210
+TXN200536,2024-08-19,Rural Development,XYZ Medical,V002,144894,RTGS,Water Pipeline Upgrade,Chennai,3451
+TXN200537,2024-07-25,Rural Development,ABC Pharma,V001,179339,RTGS,Electricity Infrastructure,Pune,2210
+TXN200538,2024-12-01,Urban Development,BuildRight Constructions,V003,218957,CHEQUE,Water Pipeline Upgrade,Bengaluru,2202
+TXN200539,2024-09-22,Urban Development,EduTech Solutions,V004,1047221,RTGS,Emergency Purchase,Mumbai,2210
+TXN200540,2024-12-21,Health,RuralTech Services,V008,247156,CHEQUE,Electricity Infrastructure,Mumbai,3054
+TXN200541,2024-07-13,Urban Development,GreenPower Ltd,V005,46006,CHEQUE,Electricity Infrastructure,Chennai,2210
+TXN200542,2024-05-03,Public Works,EduTech Solutions,V004,259011,CHEQUE,Electricity Infrastructure,Chennai,3054
+TXN200543,2025-01-11,Public Works,BuildRight Constructions,V003,122753,RTGS,Digital Education Program,Delhi,2210
+TXN200544,2024-06-29,Rural Development,AquaWorks,V006,47703,CHEQUE,Road Repair Work,Delhi,3054
+TXN200545,2024-05-25,Education,AquaWorks,V006,163538,RTGS,Medicine Procurement,Pune,3054
+TXN200546,2024-11-30,Education,XYZ Medical,V002,105860,CHEQUE,Road Repair Work,Mumbai,3054
+TXN200547,2024-08-07,Rural Development,ABC Pharma,V001,90616,CHEQUE,Digital Education Program,Chennai,3451
+TXN200548,2024-10-14,Education,Metro Infra,V007,43375,NEFT,Infrastructure Maintenance,Chennai,3601
+TXN200549,2024-10-12,Health,ABC Pharma,V001,246056,NEFT,Road Repair Work,Delhi,2202
+TXN200550,2025-01-19,Urban Development,XYZ Medical,V002,128722,CHEQUE,Water Pipeline Upgrade,Bengaluru,3451
+TXN200551,2024-07-15,Health,EduTech Solutions,V004,132953,RTGS,Medicine Procurement,Delhi,3601
+TXN200552,2024-06-04,Education,RuralTech Services,V008,193495,CHEQUE,Electricity Infrastructure,Bengaluru,2210
+TXN200553,2025-01-17,Rural Development,ABC Pharma,V001,84295,RTGS,Electricity Infrastructure,Mumbai,3451
+TXN200554,2024-11-28,Urban Development,BuildRight Constructions,V003,1744320,CHEQUE,Road Repair Work,Delhi,2202
+TXN200555,2024-07-27,Health,Metro Infra,V007,235356,NEFT,Electricity Infrastructure,Delhi,2202
+TXN200556,2024-05-19,Education,ABC Pharma,V001,802091,RTGS,Infrastructure Maintenance,Mumbai,2210
+TXN200557,2025-01-10,Rural Development,Metro Infra,V007,80216,RTGS,Medicine Procurement,Bengaluru,2210
+TXN200558,2024-05-20,Education,BuildRight Constructions,V003,82681,CHEQUE,Water Pipeline Upgrade,Pune,2210
+TXN200559,2024-12-18,Transport,ABC Pharma,V001,762310,CHEQUE,Electricity Infrastructure,Delhi,3601
+TXN200560,2025-01-13,Urban Development,XYZ Medical,V002,213394,CHEQUE,Water Pipeline Upgrade,Pune,3451
+TXN200561,2024-10-21,Rural Development,ABC Pharma,V001,94665,NEFT,Infrastructure Maintenance,Chennai,3451
+TXN200562,2024-07-16,Health,EduTech Solutions,V004,68940,CHEQUE,Medicine Procurement,Chennai,3601
+TXN200563,2024-09-28,Rural Development,XYZ Medical,V002,1201074,NEFT,Medicine Procurement,Pune,3054
+TXN200564,2024-09-02,Public Works,GreenPower Ltd,V005,198971,CHEQUE,Digital Education Program,Mumbai,2210
+TXN200565,2024-05-11,Health,ABC Pharma,V001,1148543,CHEQUE,Road Repair Work,Bengaluru,3451
+TXN200566,2025-01-20,Rural Development,EduTech Solutions,V004,232069,NEFT,Medicine Procurement,Delhi,2210
+TXN200567,2024-06-09,Transport,ABC Pharma,V001,116904,RTGS,Digital Education Program,Mumbai,3054
+TXN200568,2024-09-01,Public Works,ABC Pharma,V001,64829,NEFT,Road Repair Work,Mumbai,3451
+TXN200569,2024-09-14,Public Works,EduTech Solutions,V004,743884,RTGS,Infrastructure Maintenance,Chennai,3054
+TXN200570,2024-09-16,Health,EduTech Solutions,V004,248299,NEFT,Water Pipeline Upgrade,Mumbai,2210
+TXN200571,2024-04-19,Public Works,Metro Infra,V007,136239,NEFT,Water Pipeline Upgrade,Delhi,3451
+TXN200572,2024-06-22,Education,ABC Pharma,V001,181140,NEFT,Road Repair Work,Chennai,2210
+TXN200573,2024-07-18,Education,GreenPower Ltd,V005,272171,NEFT,Electricity Infrastructure,Pune,3451
+TXN200574,2024-05-31,Education,RuralTech Services,V008,83629,CHEQUE,Electricity Infrastructure,Pune,3451
+TXN200575,2024-08-06,Public Works,GreenPower Ltd,V005,64055,CHEQUE,Emergency Purchase,Mumbai,3054
+TXN200576,2024-06-12,Rural Development,XYZ Medical,V002,222168,RTGS,Digital Education Program,Delhi,2210
+TXN200577,2024-05-05,Urban Development,ABC Pharma,V001,856203,NEFT,Water Pipeline Upgrade,Delhi,3451
+TXN200578,2024-12-18,Rural Development,GreenPower Ltd,V005,157972,NEFT,Medicine Procurement,Pune,3054
+TXN200579,2024-10-20,Transport,BuildRight Constructions,V003,230922,NEFT,Emergency Purchase,Bengaluru,3054
+TXN200580,2024-09-13,Education,ABC Pharma,V001,245651,NEFT,Medicine Procurement,Mumbai,3054
+TXN200581,2024-09-19,Public Works,ABC Pharma,V001,59044,NEFT,Infrastructure Maintenance,Chennai,3054
+TXN200582,2024-08-13,Education,ABC Pharma,V001,65454,NEFT,Road Repair Work,Pune,2210
+TXN200583,2025-01-17,Urban Development,EduTech Solutions,V004,1320515,NEFT,Digital Education Program,Mumbai,3054
+TXN200584,2024-10-04,Urban Development,BuildRight Constructions,V003,246564,CHEQUE,Digital Education Program,Pune,3054
+TXN200585,2024-06-25,Urban Development,XYZ Medical,V002,278351,NEFT,Digital Education Program,Bengaluru,2210
+TXN200586,2024-07-24,Rural Development,EduTech Solutions,V004,239922,RTGS,Emergency Purchase,Pune,2202
+TXN200587,2024-11-28,Public Works,ABC Pharma,V001,1491491,RTGS,Infrastructure Maintenance,Pune,2210
+TXN200588,2024-11-28,Transport,RuralTech Services,V008,1664591,CHEQUE,Electricity Infrastructure,Bengaluru,2210
+TXN200589,2024-10-25,Health,RuralTech Services,V008,85565,NEFT,Road Repair Work,Bengaluru,2210
+TXN200590,2024-05-31,Education,XYZ Medical,V002,156370,RTGS,Infrastructure Maintenance,Pune,3601
+TXN200591,2024-04-30,Health,EduTech Solutions,V004,96588,CHEQUE,Water Pipeline Upgrade,Bengaluru,2210
+TXN200592,2024-05-01,Transport,ABC Pharma,V001,84734,CHEQUE,Emergency Purchase,Pune,2202
+TXN200593,2024-05-22,Health,RuralTech Services,V008,160831,CHEQUE,Infrastructure Maintenance,Delhi,3451
+TXN200594,2024-09-10,Health,EduTech Solutions,V004,246850,RTGS,Medicine Procurement,Delhi,3451
+TXN200595,2024-12-03,Public Works,BuildRight Constructions,V003,204507,CHEQUE,Emergency Purchase,Chennai,2210
+TXN200596,2024-11-27,Rural Development,ABC Pharma,V001,101364,RTGS,Electricity Infrastructure,Chennai,2202
+TXN200597,2024-10-04,Education,Metro Infra,V007,124412,CHEQUE,Medicine Procurement,Pune,2202
+TXN200598,2024-07-26,Health,RuralTech Services,V008,61487,RTGS,Infrastructure Maintenance,Delhi,3054
+TXN200599,2024-11-11,Education,EduTech Solutions,V004,122319,CHEQUE,Infrastructure Maintenance,Delhi,3451
