@@ -566,7 +566,7 @@ Ensure the following are installed on your system:
 ### 1. Clone Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/r3ckl3ss7/SmartGov.ai
 cd SmartGov.AI
 ```
 
