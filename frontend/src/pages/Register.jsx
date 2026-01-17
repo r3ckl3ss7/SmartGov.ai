@@ -2,13 +2,12 @@ import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { motion } from 'framer-motion';
-import { Shield, Mail, Lock, AlertCircle, UserCircle } from 'lucide-react';
+import { Shield, Mail, Lock, AlertCircle } from 'lucide-react';
 
 const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [role, setRole] = useState('auditor');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const { register } = useAuth();
@@ -29,7 +28,7 @@ const Register = () => {
     }
 
     setLoading(true);
-    const result = await register(email, password, role);
+    const result = await register(email, password);
 
     if (result.success) {
       navigate('/dashboard');
@@ -82,23 +81,6 @@ const Register = () => {
                   placeholder="admin@smartgov.ai"
                   required
                 />
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-slate-300 mb-2">
-                Role
-              </label>
-              <div className="relative">
-                <UserCircle className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
-                <select
-                  value={role}
-                  onChange={(e) => setRole(e.target.value)}
-                  className="w-full pl-11 pr-4 py-3 bg-slate-900/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all appearance-none"
-                >
-                  <option value="auditor">Auditor</option>
-                  <option value="admin">Admin</option>
-                </select>
               </div>
             </div>
 

@@ -3,7 +3,7 @@ import asyncHandler from "express-async-handler";
 import generateToken from "../utils/generateToken.js";
 import bcrypt from 'bcrypt'
 const registerUser = asyncHandler(async (req, res) => {
-  const { email, password, role } = req.body;
+  const { email, password } = req.body;
 
   if (!email || !password) {
     res.status(400);
@@ -20,7 +20,6 @@ const hashedPass=await bcrypt.hash(password,10)
   const user = await User.create({
     email,
     password:hashedPass,
-    role: role || "auditor",
   });
 
   if (user) {
@@ -37,7 +36,6 @@ const hashedPass=await bcrypt.hash(password,10)
     res.status(201).json({
       _id: user._id,
       email: user.email,
-      role: user.role,
       isActive: user.isActive,
       token,
     });
@@ -82,7 +80,6 @@ const loginUser = asyncHandler(async (req, res) => {
     res.json({
       _id: user._id,
       email: user.email,
-      role: user.role,
       isActive: user.isActive,
       token,
     });

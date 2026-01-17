@@ -17,6 +17,11 @@ import {
   Building2,
   Calendar,
   TrendingDown,
+  Search,
+  Target,
+  ShieldAlert,
+  Clock,
+  CheckCircle,
 } from 'lucide-react';
 import {
   BarChart,
@@ -57,6 +62,8 @@ const TransactionDetails = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [pagination, setPagination] = useState({});
   const [activeTab, setActiveTab] = useState('overview');
+  const [simulationParams, setSimulationParams] = useState({ percentage: 10 });
+  const [simulationResult, setSimulationResult] = useState(null);
 
   useEffect(() => {
     fetchTransactions();
@@ -66,7 +73,7 @@ const TransactionDetails = () => {
     setLoading(true);
     try {
       const { data } = await axios.get(
-        `http://localhost:3000/api/v1/admin/uploads/${fileId}/transactions`,
+        `${import.meta.env.VITE_API_URL}/api/v1/admin/uploads/${fileId}/transactions`,
         {
           params: { page: currentPage, limit: 50 },
         }
@@ -86,7 +93,7 @@ const TransactionDetails = () => {
     setAnalyzing(true);
     try {
       const { data } = await axios.get(
-        `http://localhost:3000/api/v1/admin/uploads/${fileId}/analysis`
+        `${import.meta.env.VITE_API_URL}/api/v1/admin/uploads/${fileId}/analysis`
       );
 
       setAnalysis(data);
@@ -132,6 +139,36 @@ const TransactionDetails = () => {
     if (score >= 70) return 'text-red-400';
     if (score >= 40) return 'text-yellow-400';
     return 'text-green-400';
+  };
+
+  const runSimulation = () => {
+    if (!analysis || !analysis.results) return;
+
+    const allTransactions = analysis.results;
+    const sortedByRisk = [...allTransactions].sort((a, b) => b.riskScore - a.riskScore);
+    const auditCount = Math.ceil((simulationParams.percentage / 100) * sortedByRisk.length);
+    const transactionsToAudit = sortedByRisk.slice(0, auditCount);
+
+    const highRiskCaught = transactionsToAudit.filter(t => t.riskLevel === 'High').length;
+    const totalHighRisk = allTransactions.filter(t => t.riskLevel === 'High').length;
+    const fraudCoveragePercent = totalHighRisk > 0 ? (highRiskCaught / totalHighRisk) * 100 : 0;
+    const transactionsSaved = allTransactions.length - auditCount;
+    const workloadReduction = ((transactionsSaved / allTransactions.length) * 100);
+
+    const estimatedLeakage = transactionsToAudit.reduce((sum, t) => {
+      const txn = transactions.find(tr => tr.transaction_id === t.payment_uid);
+      return sum + (txn?.payment?.amount || 0);
+    }, 0);
+
+    setSimulationResult({
+      auditCount,
+      transactionsSaved,
+      fraudCoveragePercent: fraudCoveragePercent.toFixed(1),
+      workloadReduction: workloadReduction.toFixed(1),
+      estimatedLeakage: estimatedLeakage.toFixed(2),
+      highRiskCaught,
+      totalHighRisk
+    });
   };
 
   return (
@@ -281,6 +318,8 @@ const TransactionDetails = () => {
                 { id: 'department', label: 'Department Analysis', icon: Building2 },
                 { id: 'vendor', label: 'Vendor Analysis', icon: Users },
                 { id: 'timeline', label: 'Timeline Analysis', icon: Calendar },
+                { id: 'investigation', label: '🔍 Investigation Mode', icon: Search },
+                { id: 'simulator', label: '🎯 What-If Simulator', icon: Target },
                 { id: 'transactions', label: 'High-Risk Transactions', icon: AlertTriangle },
               ].map((tab) => (
                 <button
@@ -716,6 +755,323 @@ const TransactionDetails = () => {
               </div>
             )}
 
+            {activeTab === 'investigation' && analysis.analytics.investigationInsights && (
+              <div className="space-y-6">
+                <div className="bg-gradient-to-br from-purple-900/30 to-blue-900/30 backdrop-blur-xl rounded-xl border border-purple-500/30 p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Search className="w-8 h-8 text-purple-400" />
+                    <div>
+                      <h2 className="text-2xl font-bold text-white">🕵️ Investigation Mode</h2>
+                      <p className="text-slate-400">Department-level deep dive with actionable insights</p>
+                    </div>
+                  </div>
+                </div>
+
+                {analysis.analytics.investigationInsights.map((insight, index) => (
+                  <motion.div
+                    key={insight.department}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    className={`bg-slate-800/50 backdrop-blur-xl rounded-xl border ${
+                      insight.anomalyRate >= 30
+                        ? 'border-red-500/50'
+                        : insight.anomalyRate >= 15
+                        ? 'border-yellow-500/50'
+                        : 'border-green-500/50'
+                    } overflow-hidden`}
+                  >
+                    <div className="p-6 border-b border-slate-700/50">
+                      <div className="flex items-start justify-between mb-4">
+                        <div>
+                          <h3 className="text-2xl font-bold text-white mb-2">{insight.department}</h3>
+                          <div className="flex items-center gap-4">
+                            <span
+                              className={`px-3 py-1 rounded-full text-xs font-bold ${
+                                insight.anomalyRate >= 30
+                                  ? 'bg-red-500/20 text-red-400 border border-red-500/50'
+                                  : insight.anomalyRate >= 15
+                                  ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/50'
+                                  : 'bg-green-500/20 text-green-400 border border-green-500/50'
+                              }`}
+                            >
+                              {insight.anomalyRate >= 30
+                                ? '🚨 HIGH PRIORITY'
+                                : insight.anomalyRate >= 15
+                                ? '⚠️ MEDIUM PRIORITY'
+                                : '✅ LOW PRIORITY'}
+                            </span>
+                            <span className="text-slate-400 text-sm">
+                              {insight.totalTransactions} total transactions
+                            </span>
+                          </div>
+                        </div>
+                        <div className="text-right">
+                          <p className="text-3xl font-bold text-red-400">{insight.anomalyRate.toFixed(1)}%</p>
+                          <p className="text-slate-400 text-sm">Anomaly Rate</p>
+                        </div>
+                      </div>
+
+                      <div className="bg-slate-900/50 rounded-lg p-4 mb-4">
+                        <div className="flex items-start gap-3">
+                          <ShieldAlert className="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" />
+                          <div>
+                            <p className="text-white font-semibold mb-2">📋 Recommendation:</p>
+                            <p className="text-slate-300 text-sm leading-relaxed">{insight.recommendation}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="p-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
+                      <div>
+                        <h4 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                          <Users className="w-5 h-5 text-red-400" />
+                          Top Risky Vendors
+                        </h4>
+                        <div className="space-y-3">
+                          {insight.topRiskyVendors && insight.topRiskyVendors.length > 0 ? (
+                            insight.topRiskyVendors.map((vendor, idx) => (
+                              <div
+                                key={vendor.vendor_id}
+                                className="bg-slate-900/50 p-4 rounded-lg border border-slate-700 hover:border-red-500/50 transition-all"
+                              >
+                                <div className="flex items-center justify-between mb-2">
+                                  <span className="text-white font-medium">
+                                    #{idx + 1} Vendor {vendor.vendor_id}
+                                  </span>
+                                  <span
+                                    className={`text-lg font-bold ${
+                                      vendor.avgRiskScore >= 70
+                                        ? 'text-red-400'
+                                        : vendor.avgRiskScore >= 40
+                                        ? 'text-yellow-400'
+                                        : 'text-green-400'
+                                    }`}
+                                  >
+                                    {vendor.avgRiskScore?.toFixed(1)}
+                                  </span>
+                                </div>
+                                <div className="flex justify-between text-sm">
+                                  <span className="text-slate-400">
+                                    {vendor.transactionCount} transactions
+                                  </span>
+                                  <span className="text-green-400 font-semibold">
+                                    ₹{vendor.totalAmount?.toLocaleString()}
+                                  </span>
+                                </div>
+                              </div>
+                            ))
+                          ) : (
+                            <p className="text-slate-400 text-sm">No risky vendors identified</p>
+                          )}
+                        </div>
+                      </div>
+
+                      <div>
+                        <h4 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                          <Clock className="w-5 h-5 text-purple-400" />
+                          Suspicious Payment Timeline
+                        </h4>
+                        <div className="space-y-2 max-h-80 overflow-y-auto">
+                          {insight.suspiciousTimeline && insight.suspiciousTimeline.length > 0 ? (
+                            insight.suspiciousTimeline.map((payment, idx) => (
+                              <div
+                                key={idx}
+                                className="bg-slate-900/50 p-3 rounded-lg border border-slate-700 hover:border-purple-500/50 transition-all"
+                              >
+                                <div className="flex items-center justify-between">
+                                  <div className="flex-1">
+                                    <p className="text-slate-400 text-xs mb-1">
+                                      {new Date(payment.transaction_date).toLocaleDateString()}
+                                    </p>
+                                    <p className="text-white text-sm">Vendor {payment.vendor_id}</p>
+                                  </div>
+                                  <span className="text-red-400 font-bold">
+                                    ₹{payment.amount?.toLocaleString()}
+                                  </span>
+                                </div>
+                              </div>
+                            ))
+                          ) : (
+                            <p className="text-slate-400 text-sm">No suspicious timeline data</p>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="p-6 bg-slate-900/30 border-t border-slate-700/50">
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div className="text-center">
+                          <p className="text-slate-400 text-sm mb-1">High Risk Count</p>
+                          <p className="text-2xl font-bold text-red-400">{insight.highRiskCount}</p>
+                        </div>
+                        <div className="text-center">
+                          <p className="text-slate-400 text-sm mb-1">Total Amount</p>
+                          <p className="text-2xl font-bold text-green-400">
+                            ₹{(insight.totalAmount / 1000000).toFixed(2)}M
+                          </p>
+                        </div>
+                        <div className="text-center">
+                          <p className="text-slate-400 text-sm mb-1">Avg Amount</p>
+                          <p className="text-2xl font-bold text-blue-400">
+                            ₹{insight.avgAmount?.toLocaleString(undefined, { maximumFractionDigits: 0 })}
+                          </p>
+                        </div>
+                        <div className="text-center">
+                          <p className="text-slate-400 text-sm mb-1">Anomaly %</p>
+                          <p className="text-2xl font-bold text-yellow-400">{insight.anomalyRate.toFixed(1)}%</p>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            )}
+
+            {activeTab === 'simulator' && (
+              <div className="space-y-6">
+                <div className="bg-gradient-to-br from-green-900/30 to-blue-900/30 backdrop-blur-xl rounded-xl border border-green-500/30 p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Target className="w-8 h-8 text-green-400" />
+                    <div>
+                      <h2 className="text-2xl font-bold text-white">🎯 What-If Audit Simulator</h2>
+                      <p className="text-slate-400">
+                        Simulate audit scenarios to optimize workload and maximize fraud detection
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-700/50 p-6">
+                  <h3 className="text-xl font-bold text-white mb-6">Simulation Parameters</h3>
+                  <div className="space-y-6">
+                    <div>
+                      <label className="block text-slate-300 mb-2 font-medium">
+                        What percentage of transactions should we audit?
+                      </label>
+                      <div className="flex items-center gap-4">
+                        <input
+                          type="range"
+                          min="1"
+                          max="100"
+                          value={simulationParams.percentage}
+                          onChange={(e) =>
+                            setSimulationParams({ ...simulationParams, percentage: parseInt(e.target.value) })
+                          }
+                          className="flex-1 h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-blue-600"
+                        />
+                        <span className="text-2xl font-bold text-white w-20 text-right">
+                          {simulationParams.percentage}%
+                        </span>
+                      </div>
+                      <p className="text-slate-400 text-sm mt-2">
+                        Audit the top {simulationParams.percentage}% riskiest transactions
+                      </p>
+                    </div>
+
+                    <button
+                      onClick={runSimulation}
+                      disabled={!analysis || !analysis.results}
+                      className="w-full px-6 py-4 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-bold rounded-lg transition-all shadow-lg shadow-green-600/30 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      <Target className="w-5 h-5" />
+                      Run Simulation
+                    </button>
+                  </div>
+                </div>
+
+                {simulationResult && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-700/50 overflow-hidden"
+                  >
+                    <div className="p-6 bg-gradient-to-r from-green-900/30 to-blue-900/30 border-b border-slate-700/50">
+                      <h3 className="text-xl font-bold text-white flex items-center gap-2">
+                        <CheckCircle className="w-6 h-6 text-green-400" />
+                        Simulation Results
+                      </h3>
+                      <p className="text-slate-400 mt-1">
+                        Auditing top {simulationParams.percentage}% of risky transactions
+                      </p>
+                    </div>
+
+                    <div className="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                      <div className="bg-gradient-to-br from-blue-900/30 to-blue-800/30 p-6 rounded-xl border border-blue-500/30">
+                        <div className="flex items-center gap-3 mb-3">
+                          <FileText className="w-6 h-6 text-blue-400" />
+                          <p className="text-slate-400 text-sm">Transactions to Audit</p>
+                        </div>
+                        <p className="text-4xl font-bold text-blue-400 mb-2">
+                          {simulationResult.auditCount}
+                        </p>
+                        <p className="text-slate-400 text-sm">
+                          Out of {analysis.results.length} total transactions
+                        </p>
+                      </div>
+
+                      <div className="bg-gradient-to-br from-green-900/30 to-green-800/30 p-6 rounded-xl border border-green-500/30">
+                        <div className="flex items-center gap-3 mb-3">
+                          <CheckCircle className="w-6 h-6 text-green-400" />
+                          <p className="text-slate-400 text-sm">Fraud Coverage</p>
+                        </div>
+                        <p className="text-4xl font-bold text-green-400 mb-2">
+                          {simulationResult.fraudCoveragePercent}%
+                        </p>
+                        <p className="text-slate-400 text-sm">
+                          Catching {simulationResult.highRiskCaught} of {simulationResult.totalHighRisk} high-risk
+                          cases
+                        </p>
+                      </div>
+
+                      <div className="bg-gradient-to-br from-purple-900/30 to-purple-800/30 p-6 rounded-xl border border-purple-500/30">
+                        <div className="flex items-center gap-3 mb-3">
+                          <TrendingDown className="w-6 h-6 text-purple-400" />
+                          <p className="text-slate-400 text-sm">Workload Reduction</p>
+                        </div>
+                        <p className="text-4xl font-bold text-purple-400 mb-2">
+                          {simulationResult.workloadReduction}%
+                        </p>
+                        <p className="text-slate-400 text-sm">
+                          Saving {simulationResult.transactionsSaved} transactions from audit
+                        </p>
+                      </div>
+
+                      <div className="bg-gradient-to-br from-red-900/30 to-red-800/30 p-6 rounded-xl border border-red-500/30 lg:col-span-3">
+                        <div className="flex items-center gap-3 mb-3">
+                          <DollarSign className="w-6 h-6 text-red-400" />
+                          <p className="text-slate-400 text-sm">Estimated Money at Risk (in audited txns)</p>
+                        </div>
+                        <p className="text-4xl font-bold text-red-400 mb-2">
+                          ₹{parseFloat(simulationResult.estimatedLeakage).toLocaleString()}
+                        </p>
+                        <p className="text-slate-400 text-sm">
+                          Total amount in transactions flagged for audit
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="p-6 bg-slate-900/30 border-t border-slate-700/50">
+                      <div className="flex items-start gap-3">
+                        <Brain className="w-6 h-6 text-blue-400 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="text-white font-semibold mb-2">💡 AI Insight:</p>
+                          <p className="text-slate-300 text-sm leading-relaxed">
+                            {simulationResult.fraudCoveragePercent >= 80
+                              ? `Excellent! By auditing only ${simulationParams.percentage}% of transactions, you can catch ${simulationResult.fraudCoveragePercent}% of high-risk cases, reducing audit workload by ${simulationResult.workloadReduction}%. This is a highly efficient audit strategy.`
+                              : simulationResult.fraudCoveragePercent >= 60
+                              ? `Good coverage. Auditing ${simulationParams.percentage}% of transactions catches ${simulationResult.fraudCoveragePercent}% of fraud. Consider increasing to 15-20% for better coverage.`
+                              : `Low fraud coverage at ${simulationResult.fraudCoveragePercent}%. Consider auditing at least 10-15% of transactions to catch majority of high-risk cases.`}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </div>
+            )}
+
             {activeTab === 'transactions' && (
               <div className="bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-700/50 overflow-hidden">
                 <div className="p-6 border-b border-slate-700/50">
@@ -754,27 +1110,54 @@ const TransactionDetails = () => {
                                   result.riskScore
                                 )}`}
                               >
-                                Score: {result.riskScore}
+                                Score: {result.riskScore}/100
                               </span>
                             </div>
                           </div>
                         </div>
+
+                        {result.aiExplanation && (
+                          <div className="bg-gradient-to-r from-purple-900/30 to-blue-900/30 rounded-lg p-4 mb-4 border border-purple-500/30">
+                            <div className="flex items-start gap-3">
+                              <Brain className="w-5 h-5 text-purple-400 flex-shrink-0 mt-1" />
+                              <div>
+                                <p className="text-sm text-purple-300 font-semibold mb-2">🤖 AI Analysis:</p>
+                                <p className="text-sm text-slate-200 leading-relaxed">{result.aiExplanation}</p>
+                              </div>
+                            </div>
+                          </div>
+                        )}
+
                         {result.reasons && result.reasons.length > 0 && (
-                          <div className="bg-slate-900/50 rounded-lg p-4">
-                            <p className="text-sm text-slate-400 mb-2 font-semibold">
-                              Risk Factors:
-                            </p>
+                          <div className="bg-slate-900/50 rounded-lg p-4 border border-yellow-500/30">
+                            <div className="flex items-center gap-2 mb-3">
+                              <AlertTriangle className="w-5 h-5 text-yellow-400" />
+                              <p className="text-sm text-yellow-400 font-bold">
+                                ⚠️ WHY FLAGGED? ({result.reasons.length} Risk Factors)
+                              </p>
+                            </div>
                             <ul className="space-y-2">
                               {result.reasons.map((reason, i) => (
                                 <li
                                   key={i}
-                                  className="text-sm text-slate-300 flex items-start gap-2"
+                                  className="text-sm text-slate-200 flex items-start gap-3 p-2 bg-slate-800/50 rounded border-l-2 border-red-500"
                                 >
-                                  <AlertTriangle className="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5" />
-                                  {reason}
+                                  <span className="text-red-400 font-bold flex-shrink-0">❗</span>
+                                  <span className="flex-1">{reason}</span>
                                 </li>
                               ))}
                             </ul>
+                            <div className="mt-4 pt-4 border-t border-slate-700">
+                              <p className="text-xs text-slate-400 flex items-center gap-2">
+                                <ShieldAlert className="w-4 h-4" />
+                                <span className="font-semibold">Action:</span>
+                                {result.riskScore >= 70
+                                  ? 'Immediate audit recommended'
+                                  : result.riskScore >= 40
+                                  ? 'Schedule detailed review'
+                                  : 'Continue routine monitoring'}
+                              </p>
+                            </div>
                           </div>
                         )}
                       </div>

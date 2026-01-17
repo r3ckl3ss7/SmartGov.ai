@@ -4,7 +4,7 @@ import axios from 'axios';
 const AuthContext = createContext();
 
 axios.defaults.withCredentials = true;
-const API_BASE_URL = 'http://localhost:3000';
+const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 export const useAuth = () => {
   const context = useContext(AuthContext);
@@ -46,12 +46,11 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  const register = async (email, password, role = 'auditor') => {
+  const register = async (email, password) => {
     try {
       const { data } = await axios.post(`${API_BASE_URL}/api/v1/user/register`, {
         email,
         password,
-        role,
       });
       setUser(data);
       localStorage.setItem('user', JSON.stringify(data));

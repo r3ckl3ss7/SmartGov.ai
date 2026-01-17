@@ -31,7 +31,7 @@ const History = () => {
   const fetchUploads = async () => {
     setLoading(true);
     try {
-      const { data } = await axios.get('http://localhost:3000/api/v1/admin/uploads', {
+      const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/api/v1/admin/uploads`, {
         params: {
           page: pagination.page,
           limit: pagination.limit,

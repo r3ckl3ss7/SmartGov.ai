@@ -7,6 +7,58 @@ app = Flask(__name__)
 # CORS(app)  
 
 
+def generate_ai_explanation(score, reasons):
+    """Generate template-based AI explanation for risk scores"""
+    if score >= 70:
+        severity = "high-risk"
+        action = "immediate audit"
+        description = "This transaction exhibits multiple red flags and deviates significantly from normal patterns."
+    elif score >= 40:
+        severity = "medium-risk"
+        action = "detailed review"
+        description = "This transaction shows some concerning patterns that warrant closer examination."
+    else:
+        severity = "low-risk"
+        action = "routine monitoring"
+        description = "This transaction appears normal but is still being monitored for irregularities."
+    
+    explanation = f"This transaction is classified as {severity} (Score: {score}/100). "
+    
+    if reasons and len(reasons) > 0:
+        explanation += description + " Key concerns include: "
+        explanation += "; ".join(reasons[:3])  # Top 3 reasons
+        explanation += f". Recommendation: {action}."
+    else:
+        explanation += f"No specific risk factors detected. Recommendation: {action}."
+    
+    return explanation
+
+
+def generate_department_recommendation(dept_name, anomaly_rate, high_risk_count, total_transactions, top_vendors):
+    """Generate actionable recommendations for departments"""
+    if anomaly_rate >= 30:
+        priority = "HIGH PRIORITY"
+        action = f"Immediate comprehensive audit recommended for {dept_name}"
+    elif anomaly_rate >= 15:
+        priority = "MEDIUM PRIORITY"
+        action = f"Scheduled review recommended for {dept_name}"
+    else:
+        priority = "LOW PRIORITY"
+        action = f"Continue routine monitoring for {dept_name}"
+    
+    recommendation = f"[{priority}] {action}. "
+    recommendation += f"Department shows {anomaly_rate:.1f}% anomaly rate ({high_risk_count} out of {total_transactions} transactions flagged). "
+    
+    if len(top_vendors) > 0:
+        top_vendor = top_vendors.iloc[0]
+        recommendation += f"Focus investigation on Vendor {top_vendor['vendor_id']} with average risk score of {top_vendor['avgRiskScore']:.1f}. "
+    
+    if anomaly_rate >= 20:
+        recommendation += f"Estimated potential leakage could be significant. Prioritize this department in next audit cycle."
+    
+    return recommendation
+
+
 @app.route('/analyze', methods=["POST"])
 def analyze():
     try:
@@ -189,6 +241,61 @@ def analyze():
         'uniqueDepartments': int(df['department'].nunique()),
         'uniqueVendors': int(df['vendor_id'].nunique())
     }
+    
+    # Generate AI explanations for each result
+    for result in results:
+        explanation = generate_ai_explanation(result['riskScore'], result['reasons'])
+        result['aiExplanation'] = explanation
+    
+    # Investigation analysis - department-level insights
+    investigation_insights = []
+    for dept_name in df['department'].unique():
+        dept_df = df[df['department'] == dept_name]
+        total_dept_transactions = len(dept_df)
+        high_risk_dept = len(dept_df[dept_df['riskLevel'] == 'High'])
+        anomaly_rate = (high_risk_dept / total_dept_transactions * 100) if total_dept_transactions > 0 else 0
+        
+        # Top risky vendors in this department
+        dept_vendor_risk = dept_df.groupby('vendor_id').agg({
+            'riskScore': 'mean',
+            'amount': 'sum',
+            'payment_uid': 'count'
+        }).reset_index()
+        dept_vendor_risk.columns = ['vendor_id', 'avgRiskScore', 'totalAmount', 'transactionCount']
+        dept_vendor_risk = dept_vendor_risk.sort_values('avgRiskScore', ascending=False).head(5)
+        
+        # Timeline of suspicious payments (high risk only)
+        suspicious_timeline = dept_df[dept_df['riskLevel'] == 'High'].sort_values('transaction_date')
+        if 'transaction_date' in suspicious_timeline.columns:
+            suspicious_timeline_data = suspicious_timeline[['transaction_date', 'amount', 'vendor_id']].head(10)
+            suspicious_timeline_data['transaction_date'] = suspicious_timeline_data['transaction_date'].astype(str)
+            suspicious_timeline_list = suspicious_timeline_data.to_dict(orient='records')
+        else:
+            suspicious_timeline_list = []
+        
+        # Generate recommendation
+        recommendation = generate_department_recommendation(
+            dept_name, 
+            anomaly_rate, 
+            high_risk_dept,
+            total_dept_transactions,
+            dept_vendor_risk
+        )
+        
+        investigation_insights.append({
+            'department': dept_name,
+            'totalTransactions': int(total_dept_transactions),
+            'highRiskCount': int(high_risk_dept),
+            'anomalyRate': float(anomaly_rate),
+            'topRiskyVendors': dept_vendor_risk.to_dict(orient='records'),
+            'suspiciousTimeline': suspicious_timeline_list,
+            'recommendation': recommendation,
+            'avgAmount': float(dept_df['amount'].mean()),
+            'totalAmount': float(dept_df['amount'].sum())
+        })
+    
+    # Sort by anomaly rate
+    investigation_insights = sorted(investigation_insights, key=lambda x: x['anomalyRate'], reverse=True)
 
     response = {
         "datasetId": dataset_id,
@@ -201,7 +308,8 @@ def analyze():
             "monthEndStats": month_end_stats.to_dict(orient='records'),
             "paymentModeAnalysis": payment_mode_analysis,
             "riskDistribution": risk_distribution,
-            "statisticalSummary": statistical_summary
+            "statisticalSummary": statistical_summary,
+            "investigationInsights": investigation_insights
         }
     }
 

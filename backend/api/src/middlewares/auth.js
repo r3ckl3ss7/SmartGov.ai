@@ -41,15 +41,6 @@ const protect = asyncHandler(async (req, res, next) => {
   }
 });
 
-const adminOnly = (req, res, next) => {
-  if (req.user && req.user.role === 'admin') {
-    next();
-  } else {
-    res.status(403);
-    throw new Error('Not authorized as admin');
-  }
-};
-
-export { protect, adminOnly };
+export { protect };
 
 

@@ -28,7 +28,7 @@ const Dashboard = () => {
 
   const fetchDashboardData = async () => {
     try {
-      const { data } = await axios.get('http://localhost:3000/api/v1/admin/uploads', {
+      const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/api/v1/admin/uploads`, {
         params: { page: 1, limit: 5 },
       });
 
